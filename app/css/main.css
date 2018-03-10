@@ -1,0 +1,92 @@
+.dusty {
+    color: #96858F
+}
+
+.lavendar {
+    color: #6D7993
+}
+
+.overcast {
+    color: #9099A2
+}
+
+.paper {
+    color: #D5D5D5
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    xmlns: http://www.w3.org/2000/svg;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #D5D5D5;
+}
+
+#titlebarContainer {
+    display: flex;
+    justify-content: flex-end;
+    height: 35px;
+    width: 100%;
+    background-color: #6D7993;
+    -webkit-app-region: drag;
+
+}
+
+/* Sizing of close/minimize svg */
+.minimize-svg, .close-svg{
+    width: 35px;
+    height: 35px;
+}
+
+/* One hover, change opacity of color of close/minimize icons */
+.minimize-svg-color, .close-svg-color{
+    fill-opacity: 0;
+    transition: fill-opacity 0.25s ease-out;
+}
+
+.minimize-svg:hover .minimize-svg-color, .close-svg:hover .close-svg-color {
+    fill-opacity: 1;
+    transition: fill-opacity 0.25s ease-out;
+}
+
+#minimize, #close {
+-webkit-app-region: no-drag;
+}
+
+/* Extras */
+
+#extras {
+    height: 50px;
+    border: 3px solid blue;
+}
+
+/* Grid */
+
+#container {
+    display: grid;
+    margin-top: 25px;
+    /*position: absolute;*/
+    left: 0;
+    right: 0;
+    grid-template-columns: 6% 85% 6%;
+    grid-column-gap: 1.5%;
+    /*border: 3px solid blue;*/
+}
+
+#container>div {
+    background-color: #96858F;
+}
+
+#circles {
+    display: block;
+    width: 98%;
+    margin: 0 auto;
+    /*transform: translateX(50%);*/
+}
