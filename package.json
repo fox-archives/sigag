@@ -1,15 +1,22 @@
 {
-  "name": "Sigag",
-  "version": "1.0.0",
-  "description": "Pomodoro Timer",
+  "name": "sigag",
+  "version": "0.0.1",
+  "description": "Pomodoro timer for studying",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EanKeen/Sigag.git"
+  },
   "author": "Edwin Kofler",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EanKeen/Sigag/issues"
+  },
+  "homepage": "https://github.com/EanKeen/Sigag#readme",
   "dependencies": {
-    "electron": "^1.8.2",
-    "npm": "^5.7.1"
+    "electron": "^1.8.3"
   }
 }
