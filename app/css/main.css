@@ -1,26 +1,13 @@
-.dusty {
-    color: #96858F
-}
-
-.lavendar {
-    color: #6D7993
-}
-
-.overcast {
-    color: #9099A2
-}
-
-.paper {
-    color: #D5D5D5
-}
+/*
+dusty: #96858F
+lavender: #6D7993
+overcast: #9099A2
+paper: #D5D5D5
+*/
 
 * {
     margin: 0;
     padding: 0;
-}
-
-svg {
-    xmlns: http://www.w3.org/2000/svg;
 }
 
 body {
@@ -29,46 +16,60 @@ body {
     background-color: #D5D5D5;
 }
 
+/* CLOSE MINIMIZE ELEMENTS */
 #titlebarContainer {
+	position: relative;
     display: flex;
-    justify-content: flex-end;
     height: 35px;
     width: 100%;
     background-color: #6D7993;
-    -webkit-app-region: drag;
-
+	justify-content: space-between;
+	 -webkit-app-region: drag;
 }
 
-/* Sizing of close/minimize svg */
-.minimize-svg, .close-svg{
-    width: 35px;
+#titlebar-left {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: row;
+}
+	
+#titlebar-right {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+}
+
+#statistics-svg {
+	padding-left: 1px;
+}
+
+.titlebar-svg {
+	width: 35px;
     height: 35px;
 }
 
-/* One hover, change opacity of color of close/minimize icons */
-.minimize-svg-color, .close-svg-color{
-    fill-opacity: 0;
-    transition: fill-opacity 0.25s ease-out;
+#settings-svg {
+	width: 30px;
+	height: 30px;
+	padding-left: 5px;
+	padding-top: 2.5px;
+
+	
 }
 
-.minimize-svg:hover .minimize-svg-color, .close-svg:hover .close-svg-color {
-    fill-opacity: 1;
-    transition: fill-opacity 0.25s ease-out;
+#settings:hover > #settings-svg, #statistics:hover > #statistics-svg, #minimize:hover > #minimize-svg, #close:hover > #close-svg {
+	stroke: #9099A2;
+	transition: stroke 250ms;
 }
 
-#minimize, #close {
+#titlebarContainer > div {
 -webkit-app-region: no-drag;
 }
 
-/* Extras */
 
-#extras {
-    height: 50px;
-    border: 3px solid blue;
-}
-
-/* Grid */
-
+/* MAIN CLOCK */
 #container {
     display: grid;
     margin-top: 25px;
@@ -77,16 +78,10 @@ body {
     right: 0;
     grid-template-columns: 6% 85% 6%;
     grid-column-gap: 1.5%;
-    /*border: 3px solid blue;*/
-}
-
-#container>div {
-    background-color: #96858F;
 }
 
 #circles {
     display: block;
     width: 98%;
     margin: 0 auto;
-    /*transform: translateX(50%);*/
 }
