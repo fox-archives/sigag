@@ -28,11 +28,7 @@ function zCreateWindow() {
         zMainWindow = null
     })
 }
-
 app.on('ready', zCreateWindow) //Creates a browser window after initialization
-
-
-
 
 
 //Extra Behaviors

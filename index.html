@@ -5,31 +5,19 @@
 	<meta charset="utf-8">
 	<title>Sigag</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<link rel="stylesheet" type="text/css" href="app/css/main.css" />
-
-	<style>
-		.progress {
-			height: 300px;
-		}
-
-		.progress>svg {
-			height: 100%;
-			display: block;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="app/css/progress-bar.css" />
 </head>
 
 <body>
-
 	<!-- MAIN NAVIGATION -->
 	<div id="titlebarContainer">
 		<div id="titlebar-left">
 			<div id="settings">
 				<svg id="settings-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					 <circle cx="12" cy="12" r="3"></circle>
-					 <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-					</svg>
+					<circle cx="12" cy="12" r="10"></circle>
+					<polyline points="12 6 12 12 16 14"></polyline>
+				</svg>
 			</div>
 
 			<div id="statistics">
@@ -58,14 +46,14 @@
 	<!-- MAIN CLOCK -->
 	<div id="container">
 		<div id="timer-left"></div>
-		 <div class="progress" id="progress"></div>
+		<div id="progress"></div>
 		<div id="timer-right"></div>
 	</div>
 
 	<!--<script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/0.5.6/dist/progressbar.js"></script>-->
 	<script src="./node_modules/progressbar.js/dist/progressbar.js"></script>
-	<script src="./app/js/menu.js"></script>
-	<script src="./app/js/progressbar.js"></script>
+	<script src="./app/js/window-manage.js"></script>
+	<script src="./app/js/progress-bar.js"></script>
 
 </body>
 
