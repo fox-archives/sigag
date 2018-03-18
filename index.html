@@ -12,9 +12,43 @@
 <body>
 	<!-- CHOOSE INTERVAL SIDEBAR -->
 	<div id="change-interval-sidebar">
-			<div id="interval-sidebar-1"><p>Recommended Intervals</p></div>
-			<div id="interval-sidebar-2"><p>Manual Intervals</p></div>
+		<div id="change-interval-sidebar-inner">
+			<div id="recommended-intervals-div">
+				<p>Recommended Intervals</p>
+				<div id="recommended-interval-buttons">
+					<button>25 work 5 break</button>
+					<button>55 work 10 break</button>
+					<button>90 work 15 break</button>
+				</div>
+			</div>
+
+			<div id="custom-interval-div">
+				<p>Custom Interval</p>
+				<div id="custom-interval-button">
+					<button id=custom-1>Button text will be updated</button>
+					<!-- Update button information via JavaScript -->
+				</div>
+				<div id="custom-interval-sliders">
+					<div id=work-slider-bundle>
+						<div id="work-slider-text"></div>
+						<div id="work-slider"></div>
+					</div>
+					<div id=short-break-slider-bundle>
+						<div id="short-break-slider-text"></div>
+						<div id="short-break-slider"></div>
+					</div>
+					<div id=long-break-slider-bundle>
+						<div id="long-break-slider-text"></div>
+						<div id="long-break-slider"></div>
+					</div>
+					<div id=long-break-interval-slider-bundle>
+						<div id="long-break-interval-slider-text"></div>
+						<div id="long-break-interval-slider"></div>
+					</div>
+				</div>
+			</div>
 			<div id="close" onclick="toggleSideNavigation(0)"><p>Close</p></div>
+		</div>
 	</div>
 
 	<!-- MAIN NAVIGATION -->

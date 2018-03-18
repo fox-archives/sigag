@@ -6,3 +6,7 @@
     height: 100%;
     display: block;
 }
+
+.progressbar-text {
+    user-select: none;
+}
