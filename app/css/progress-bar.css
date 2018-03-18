@@ -1,8 +1,8 @@
-.progress {
+.countdown {
     height: 500px;
 }
 
-.progress > svg {
+.countdown > svg {
     height: 100%;
     display: block;
 }

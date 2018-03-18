@@ -11,13 +11,14 @@
     "url": "git+https://github.com/EanKeen/Sigag.git"
   },
   "author": "Edwin Kofler",
-  "license": "MIT",
+  "license": "",
   "bugs": {
     "url": "https://github.com/EanKeen/Sigag/issues"
   },
   "homepage": "https://github.com/EanKeen/Sigag#readme",
   "dependencies": {
     "electron": "^1.8.3",
+    "npm": "^5.7.1",
     "progressbar.js": "^1.0.1"
   }
 }

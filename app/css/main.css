@@ -16,7 +16,30 @@ body {
     background-color: #D5D5D5;
 }
 
-/* CLOSE MINIMIZE ELEMENTS */
+/* CHANGE INTERVAL SIDEBAR START */
+#change-interval-sidebar {
+height: 100%;
+width: 0px;
+position: fixed; /* Stay in place */
+z-index 1;
+top 0;
+left 0;
+background-color: blue;
+overflow-x: hidden /* Disable horizontal scroll */
+padding-top: 60px; /* Place content 60px from the top */
+transition: 0.5s;
+}
+
+#main {
+    transition: margin-left 0.5s;
+}
+
+
+
+
+/* CHANGE INTERVAL SIDEBAR END */
+
+/* TITLEBAR START */
 #titlebarContainer {
 	position: relative;
     display: flex;
@@ -24,7 +47,7 @@ body {
     width: 100%;
     background-color: #6D7993;
 	justify-content: space-between;
-	 -webkit-app-region: drag;
+    -webkit-app-region: drag;
 }
 
 #titlebar-left {
@@ -41,6 +64,9 @@ body {
 	flex-direction: row;
 }
 
+#clock-svg {
+
+}
 #statistics-svg {
 	padding-left: 1px;
 }
@@ -50,25 +76,37 @@ body {
     height: 35px;
 }
 
-#settings-svg {
+#clock-svg {
 	width: 30px;
 	height: 30px;
 	padding-left: 5px;
 	padding-top: 2.5px;
-
-
 }
 
-#settings:hover > #settings-svg, #statistics:hover > #statistics-svg, #minimize:hover > #minimize-svg, #close:hover > #close-svg {
+#clock:hover > #clock-svg, #statistics:hover > #statistics-svg, #minimize:hover > #minimize-svg, #close:hover > #close-svg {
 	stroke: #9099A2;
 	transition: stroke 250ms;
 }
 
 #titlebarContainer > div {
--webkit-app-region: no-drag;
+    -webkit-app-region: no-drag;
 }
+/* TITLEBAR ENDS */
 
 
+/* CLOCK SIDEBAR */
+#change-interval-sidebar {
+    position: fixed;
+    background: #00685F;
+    width: 0%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden; /* Disable the horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s;
+}
 /* MAIN CLOCK */
 #container {
     display: grid;
