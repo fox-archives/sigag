@@ -41,6 +41,19 @@ p {
 #change-interval-sidebar {
     text-align: center;
 }
+
+#time-sliders > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#time-sliders > div > p {
+    margin-right: 10px;
+}
+
+
 /* CHANGE INTERVAL SIDEBAR */
 
 /* TITLEBAR START */
