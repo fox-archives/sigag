@@ -1,6 +1,6 @@
 const {remote} = require('electron')
-document.getElementById('close').addEventListener('click', closeWindow);
-document.getElementById('minimize').addEventListener('click', minimizeWindow);
+document.getElementById('close-application').addEventListener('click', closeWindow);
+document.getElementById('minimize-application').addEventListener('click', minimizeWindow);
 
 function closeWindow () {
     var window = remote.getCurrentWindow()

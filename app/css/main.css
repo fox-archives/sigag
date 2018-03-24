@@ -35,12 +35,13 @@ p {
     z-index: 1;
     overflow-x: hidden; /* Disable the horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s ease-out;
+    transition: 0.5s ease-in-out;
 }
 
 #change-interval-sidebar {
     text-align: center;
 }
+/* CHANGE INTERVAL SIDEBAR */
 
 /* TITLEBAR START */
 #titlebarContainer {
@@ -86,7 +87,7 @@ p {
 	padding-top: 2.5px;
 }
 
-#clock:hover > #clock-svg, #statistics:hover > #statistics-svg, #minimize:hover > #minimize-svg, #close:hover > #close-svg {
+#clock:hover > #clock-svg, #statistics:hover > #statistics-svg, #minimize-application:hover > #minimize-application-svg, #close-application:hover > #close-application-svg {
 	stroke: #9099A2;
 	transition: stroke 250ms;
 }
@@ -96,7 +97,11 @@ p {
 }
 /* TITLEBAR ENDS */
 
-/* MAIN CLOCK */
+/* SET INTERVAL TIME SIDEBAR START */
+
+/* SET INTERVAL TIME SIDEBAR START */
+
+/* MAIN CLOCK START */
 #container {
     display: grid;
     margin-top: 25px;

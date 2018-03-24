@@ -1,107 +1,124 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Sigag</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="app/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="app/css/progress-bar.css" />
+	</head>
 
-<head>
-	<meta charset="utf-8">
-	<title>Sigag</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="app/css/main.css" />
-	<link rel="stylesheet" type="text/css" href="app/css/progress-bar.css" />
-</head>
-
-<body>
-	<!-- CHOOSE INTERVAL SIDEBAR -->
-	<div id="change-interval-sidebar">
-		<div id="change-interval-sidebar-inner">
-			<div id="recommended-intervals-div">
-				<p>Recommended Intervals</p>
-				<div id="recommended-interval-buttons">
-					<button>25 work 5 break</button>
-					<button>55 work 10 break</button>
-					<button>90 work 15 break</button>
-				</div>
-			</div>
-
-			<div id="custom-interval-div">
-				<p>Custom Interval</p>
-				<div id="custom-interval-button">
-					<button id=custom-1>Button text will be updated</button>
-					<!-- Update button information via JavaScript -->
-				</div>
-				<div id="custom-interval-sliders">
-					<div id=work-slider-bundle>
-						<div id="work-slider-text"></div>
-						<div id="work-slider"></div>
-					</div>
-					<div id=short-break-slider-bundle>
-						<div id="short-break-slider-text"></div>
-						<div id="short-break-slider"></div>
-					</div>
-					<div id=long-break-slider-bundle>
-						<div id="long-break-slider-text"></div>
-						<div id="long-break-slider"></div>
-					</div>
-					<div id=long-break-interval-slider-bundle>
-						<div id="long-break-interval-slider-text"></div>
-						<div id="long-break-interval-slider"></div>
+	<body>
+		<!-- CHOOSE INTERVAL SIDEBAR -->
+		<div id="change-interval-sidebar">
+			<div id="change-interval-sidebar-inner">
+				<div id="recommended-intervals-div">
+					<p>Recommended Intervals</p>
+					<div id="recommended-interval-buttons">
+						<button>25 work 5 break</button>
+						<button>55 work 10 break</button>
+						<button>90 work 15 break</button>
 					</div>
 				</div>
-			</div>
-			<div id="close" onclick="toggleSideNavigation(0)"><p>Close</p></div>
-		</div>
-	</div>
 
-	<!-- MAIN NAVIGATION -->
-	<div id="main">
-		<div id="titlebarContainer">
-			<div id="titlebar-left">
-				<div id="clock" onclick="toggleSideNavigation(1)">
-					<svg id="clock-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<circle cx="12" cy="12" r="10"></circle>
-						<polyline points="12 6 12 12 16 14"></polyline>
-					</svg>
+				<div id="custom-interval-div">
+					<p>Custom Interval</p>
+					<div id="custom-interval-button">
+						<button id=custom-1>Button text will be updated</button>
+						<!-- Update button information via JavaScript -->
+					</div>
+					<div id="custom-interval-sliders">
+						<div id=work-slider-bundle>
+							<div id="work-slider-text">
+								<p>Work Duration</p>
+							</div>
+							<div id="work-slider">
+								<input type=range min="1" max="90" value="25">
+							</div>
+						</div>
+						<div id=short-break-slider-bundle>
+							<div id="short-break-slider-text">
+								<p>Short Break Duration</p>
+							</div>
+							<div id="short-break-slider">
+								<input type="range" min="1" max="50" value"5">
+							</div>
+						</div>
+						<div id=long-break-slider-bundle>
+							<div id="long-break-slider-text">
+								<p>Long Break Duration</p>
+							</div>
+							<div id="long-break-slider">
+								<input type="range" min="1" max="50" value"5">
+							</div>
+						</div>
+						<div id=long-break-interval-slider-bundle>
+							<div id="long-break-interval-slider-text">
+								<p>Long Break Interval</p>
+							</div>
+							<div id="long-break-interval-slider">
+								<input type="range" min="1" max="50" value"5">
+							</div>
+						</div>
+					</div>
 				</div>
-
-				<div id="statistics">
-					<svg id="statistics-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<line x1="18" y1="20" x2="18" y2="10"></line>
-							<line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line>
-						</svg>
-				</div>
-			</div>
-			<div id="titlebar-right">
-				<div id="minimize">
-					<svg id="minimize-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<line x1="5" y1="12" x2="19" y2="12"></line>
-						</svg>
-				</div>
-
-				<div id="close">
-					<svg id="close-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<line x1="18" y1="6" x2="6" y2="18"></line>
-						<line x1="6" y1="6" x2="18" y2="18"></line>
-						</svg>
+				<div id="custom-interval-div-close" onclick="toggleSideNavigation(0)">
+					<p>Close</p>
 				</div>
 			</div>
 		</div>
-	<!-- END OF TITLEBAR -->
+		<!-- END CHOOSE INTERVAL SIDEBAR -->
 
-	<!-- START COUNTDOWN CLOCK -->
-	<div id="container">
-			<div id="timer-left"></div>
-			<div id="countdown"></div>
-			<div id="timer-right"></div>
-	</div>
+		<!-- MAIN NAVIGATION -->
+		<div id="main">
+			<div id="titlebarContainer">
+				<div id="titlebar-left">
+					<div id="clock" onclick="toggleSideNavigation(1)">
+						<svg id="clock-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<circle cx="12" cy="12" r="10"></circle>
+							<polyline points="12 6 12 12 16 14"></polyline>
+						</svg>
+					</div>
 
-	<!-- END COUNTDOWN CLOCK -->
+					<div id="statistics">
+						<svg id="statistics-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<line x1="18" y1="20" x2="18" y2="10"></line>
+								<line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line>
+							</svg>
+					</div>
+				</div>
+				<div id="titlebar-right">
+					<div id="minimize-application">
+						<svg id="minimize-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<line x1="5" y1="12" x2="19" y2="12"></line>
+							</svg>
+					</div>
 
-</div>
-	<!--<script>src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/0.5.6/dist/progressbar.js"></script>-->
-	<script src="./app/js/window-manage.js"></script>
-	<script src="./app/js/navigation.js"></script>
-	<script src="./node_modules/progressbar.js/dist/progressbar.js"></script>
-	<script src="./app/js/progress-bar.js"></script>
+					<div id="close-application">
+						<svg id="close-application-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<line x1="18" y1="6" x2="6" y2="18"></line>
+							<line x1="6" y1="6" x2="18" y2="18"></line>
+							</svg>
+					</div>
+				</div>
+			</div> <!-- Titlebar Container -->
 
-</body>
+		<!-- END OF TITLEBAR -->
 
+		<!-- START COUNTDOWN CLOCK -->
+		<div id="container">
+				<div id="timer-left"></div>
+				<div id="countdown"></div>
+				<div id="timer-right"></div>
+		</div>
+		<!-- END COUNTDOWN CLOCK -->
+
+	</div> <!-- Main Div -->
+
+
+		<script src="./app/js/window-manage.js"></script>
+		<script src="./app/js/navigation.js"></script>
+		<script src="./node_modules/progressbar.js/dist/progressbar.js"></script>
+		<script src="./app/js/progress-bar.js"></script>
+	</body>
 </html>
