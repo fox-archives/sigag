@@ -20,15 +20,11 @@ p {
     user-select: none;
 }
 
-#main {
-    transition: margin-left 0.5s;
-}
-
-/* CHANGE INTERVAL SIDEBAR */
+/* CHANGE INTERVAL SIDEBAR START */
 #change-interval-sidebar {
     position: fixed;
     background: #96858F;
-    top: 0px;
+    top: 35px;
     left: -400px;
     width: 400px;
     height: 100%;
@@ -52,9 +48,7 @@ p {
 #time-sliders > div > p {
     margin-right: 10px;
 }
-
-
-/* CHANGE INTERVAL SIDEBAR */
+/* CHANGE INTERVAL SIDEBAR END*/
 
 /* TITLEBAR START */
 #titlebarContainer {
@@ -81,9 +75,6 @@ p {
 	flex-direction: row;
 }
 
-#clock-svg {
-
-}
 #statistics-svg {
 	padding-left: 1px;
 }
@@ -109,10 +100,6 @@ p {
     -webkit-app-region: no-drag;
 }
 /* TITLEBAR ENDS */
-
-/* SET INTERVAL TIME SIDEBAR START */
-
-/* SET INTERVAL TIME SIDEBAR START */
 
 /* MAIN CLOCK START */
 #container {
