@@ -46,33 +46,33 @@
 			<div id="change-interval-sidebar">
 				<div id="change-interval-sidebar-inner">
 					<p>Recommended Intervals</p>
-					<button>25 work 5 break</button>
-					<button>55 work 10 break</button>
-					<button>90 work 15 break</button>
+					<button onclick="customInterval(25, 5, 10, 4)">25 work 5 break</button>
+					<button onclick="customInterval(55, 10, 20, 4)">55 work 10 break</button>
+					<button onclick="customInterval(90, 15, 20, 3)">90 work 15 break</button>
 
 					<p>Custom Interval</p>
-					<button id="buttone">Button text will be updated</button>
+					<button id="custom-interval">Button text will be updated</button>
 
 					<div id="time-sliders">
 						<p>Work Duration</p>
-						<div>
-							<p>25</p>
-							<input type="range" min="1" max="50" value="25">
+						<div onmouseover="startChangeSliderText(1)" onmouesout="stopChangeSliderText(1)">
+							<p id="work-duration-text">25</p>
+							<input id="work-duration" type="range" min="1" max="120" value="25">
 						</div>
 						<p>Short Break Duration</p>
 						<div>
 							<p>5</p>
-							<input type="range" min="1" max="50" value="25">
+							<input id="short-break-duration" type="range" min="1" max="25" value="5">
 						</div>
 						<p>Long Break Duration</p>
 						<div>
 							<p>10</p>
-							<input type="range" min="1" max="50" value="25">
+							<input id="long-break-duration" type="range" min="1" max="50" value="10">
 						</div>
 						<p>Long Break Interval</p>
 						<div>
 							<p>4</p>
-							<input type="range" min="1" max="50" value="25">
+							<input id="long-break-interval" type="range" min="1" max="8" value="4">
 						</div>
 					</div>
 
@@ -97,6 +97,7 @@
 		</body>
 		<script src="./app/js/window-manage.js"></script>
 		<script src="./app/js/navigation.js"></script>
+		<script src="./app/js/timer-interval.js"></script>
 		<script src="./node_modules/progressbar.js/dist/progressbar.js"></script>
 		<script src="./app/js/progress-bar.js"></script>
 </html>
