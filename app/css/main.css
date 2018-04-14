@@ -20,6 +20,10 @@ p {
     user-select: none;
 }
 
+button::-moz-focus-inner {
+  border: 0;
+}
+
 button {
     margin: 5px 10px 5px 10px;
     background-color: #9099A2;
@@ -27,6 +31,7 @@ button {
     height: 45px;
     border: 4px solid #6D7993;
     outline: none;    /* Removes blue outline around button on click (Chrome)*/
+
 }
 
 input[type = range] {
@@ -149,7 +154,6 @@ input[type=range]::-webkit-slider-runnable-track {
 /* MAIN CLOCK START */
 #container {
     display: grid;
-    /*position: absolute;*/
     left: 0;
     right: 0;
     grid-template-columns: 6% 85% 6%;
