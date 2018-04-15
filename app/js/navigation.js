@@ -6,7 +6,6 @@ function toggleSideNavigation(isOpen) {
     }
     if(isOpen === 0) //Close the sidebar
     {
-        document.getElementById("change-interval-sidebar").style.left="-400px"
-        document.getElementById("change-interval-sidebar").style.width="400px"
+        document.getElementById("change-interval-sidebar").style.left="-100%"
     }
 }

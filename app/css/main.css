@@ -1,36 +1,43 @@
-/*
-dusty: #96858F
-lavender: #6D7993
-overcast: #9099A2
-paper: #D5D5D5
-*/
+@font-face {
+    font-family: 'source-regular';
+    src: url('../assets/fonts/poppins-regular-webfont.woff') format('woff'),
+         url('../assets/fonts/poppins-regular-webfont.woff2') format('woff2');
+         font-weight: normal;
+         font-style: normal;
+}
 
 * {
     margin: 0;
     padding: 0;
+    font-family: source-regular;
+    user-select: none;
 }
 
 body {
     margin: 0px;
     padding: 0px;
-    background-color: #D5D5D5;
+    background-color: #0e83cd;
 }
 
-p {
-    user-select: none;
+p, a{
+    color: white;
 }
-
 button::-moz-focus-inner {
   border: 0;
 }
 
 button {
     margin: 5px 10px 5px 10px;
-    background-color: #9099A2;
+    background-color: #f06060;
     width: 150px;
     height: 45px;
-    border: 4px solid #6D7993;
+    border: none;
+    border-radius: 2px;
     outline: none;    /* Removes blue outline around button on click (Chrome)*/
+    box-shadow: 2px 2px 2px 2px black;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: inner-block;
 
 }
 
@@ -38,10 +45,9 @@ input[type = range] {
     margin: 5px 10px 5px 0px;
     -webkit-appearance: none;
     outline: none;
-    border: 1px solid black;
+    background: none;
     height: 16px;
     width: 200px;
-    background: #6D7993
 }
 
 intput[type=range]:focus {
@@ -49,32 +55,100 @@ intput[type=range]:focus {
 }
 
 input[type=range]::-webkit-slider-thumb {
+    margin-top: -5px;
     -webkit-appearance: none;
     border: 1px solid black;
-    height: 100%;
-    width: 10px;
+    height: 16px;
+    width: 16px;
     cursor: pointer;
-    background: #9099A2;
+    border-radius: 10px;
+    background: #ab3c3c
+
 }
 
 input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
-    height: 85%;
-
+    height: 5px;
+    box-shadow: 2px 2px 2px 2px black;
+    background: #fff;
 }
 
+/* TITLEBAR START */
+#titlebarContainer {
+	position: fixed;
+    display: flex;
+    height: 40px;
+    width: 100%;
+    background-color: #0a71b3;
+	justify-content: space-between;
+    -webkit-app-region: drag;
+}
+
+/* Title-bar left and title-bar right have no drag */
+#titlebarContainer > div {
+    -webkit-app-region: no-drag;
+}
+
+#titlebar-left {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: row;
+}
+
+#titlebar-right {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+}
+
+.titlebar-svg {
+	width: 30px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+#clock-svg {
+    width: 25px;
+	height: 25px;
+
+    margin-left: 10px;
+
+    padding-top: 2.5px;
+}
+
+#statistics-svg {
+    padding-left: 8px;
+}
+
+#close-application-svg {
+    padding-right: 5px;
+}
+
+#minimize-application-svg {
+    padding-right: 4px;
+}
+
+
+#clock:hover > #clock-svg, #statistics:hover > #statistics-svg, #minimize-application:hover > #minimize-application-svg, #close-application:hover > #close-application-svg {
+	stroke: #f06060;
+	transition: stroke 200ms;
+}
+
+
+/* TITLEBAR ENDS */
 
 /* CHANGE INTERVAL SIDEBAR START */
 #change-interval-sidebar {
     position: fixed;
-    background: #96858F;
-    top: 35px;
+    background: #0e83cd;
+    margin-top: 40px;
+
     left: -400px;
     width: 400px;
     height: 100%;
-    z-index: 1;
     overflow-x: hidden; /* Disable the horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s ease-in-out;
 }
 
@@ -93,62 +167,15 @@ input[type=range]::-webkit-slider-runnable-track {
     margin-right: 10px;
     width: 20px
 }
+
+.interval-text {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
 /* CHANGE INTERVAL SIDEBAR END*/
-
-/* TITLEBAR START */
-#titlebarContainer {
-	position: fixed;
-    display: flex;
-    height: 35px;
-    width: 100%;
-    background-color: #6D7993;
-	justify-content: space-between;
-    -webkit-app-region: drag;
-}
-
-#titlebar-left {
-	position: relative;
-	display: flex;
-	justify-content: flex-end;
-	flex-direction: row;
-}
-
-#titlebar-right {
-	position: relative;
-	display: flex;
-	justify-content: flex-start;
-	flex-direction: row;
-}
-
-#statistics-svg {
-	padding-left: 1px;
-}
-
-.titlebar-svg {
-	width: 35px;
-    height: 35px;
-}
-
-#clock-svg {
-	width: 30px;
-	height: 30px;
-	padding-left: 5px;
-	padding-top: 2.5px;
-}
-
-#clock:hover > #clock-svg, #statistics:hover > #statistics-svg, #minimize-application:hover > #minimize-application-svg, #close-application:hover > #close-application-svg {
-	stroke: #9099A2;
-	transition: stroke 250ms;
-}
-
-#titlebarContainer > div {
-    -webkit-app-region: no-drag;
-}
-/* TITLEBAR ENDS */
 
 #main-ui {
     position: fixed;
-    margin-top: 35px;
 }
 
 /* MAIN CLOCK START */

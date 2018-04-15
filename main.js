@@ -12,7 +12,7 @@ function zCreateWindow() {
     //Creates the browser window
     zMainWindow = new BrowserWindow({
         width: 400,
-        height: 600,
+        height: 700,
         frame: false,
         icon: __dirname + '/app/assets/icon.png' /*, resizable: false*/
     })

@@ -12,14 +12,14 @@
 			<nav id="titlebarContainer">
 				<div id="titlebar-left">
 					<div id="clock" onclick="toggleSideNavigation(1)">
-						<svg id="clock-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<svg id="clock-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<circle cx="12" cy="12" r="10"></circle>
 							<polyline points="12 6 12 12 16 14"></polyline>
 						</svg>
 					</div>
 
 					<div id="statistics">
-						<svg id="statistics-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<svg id="statistics-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 								<line x1="18" y1="20" x2="18" y2="10"></line>
 								<line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line>
 							</svg>
@@ -27,13 +27,13 @@
 				</div>
 				<div id="titlebar-right">
 					<div id="minimize-application">
-						<svg id="minimize-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<svg id="minimize-application-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 								<line x1="5" y1="12" x2="19" y2="12"></line>
 							</svg>
 					</div>
 
 					<div id="close-application">
-						<svg id="close-application-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<svg id="close-application-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<line x1="18" y1="6" x2="6" y2="18"></line>
 							<line x1="6" y1="6" x2="18" y2="18"></line>
 							</svg>
@@ -45,39 +45,39 @@
 			<!-- CHOOSE INTERVAL SIDEBAR -->
 			<div id="change-interval-sidebar">
 				<div id="change-interval-sidebar-inner">
-					<p>Recommended Intervals</p>
+					<p class="interval-text">Recommended Intervals</p>
 					<button onclick="updateAllIntervalComponents(25, 5, 10, 4)">25 work 5 break</button>
 					<button onclick="updateAllIntervalComponents(55, 10, 20, 4)">55 work 10 break</button>
 					<button onclick="updateAllIntervalComponents(90, 15, 20, 3)">90 work 15 break</button>
 
-					<p>Custom Interval</p>
+					<p class="interval-text">Custom Interval</p>
 					<button id="custom-interval"><b id="custom-interval-work">25</b> work <b id="custom-interval-break">5</b> break</button>
 
 					<div id="time-sliders">
-						<p>Work Duration</p>
-						<div onmousemove="updateOnSliderOnMove(0)" onmouseup="updateOnSliderOnMove(0)">
+						<p class="interval-text">Work Duration</p>
+						<div onmousemove="updateOnSliderOnMove(0)" onmousedown="updateOnSliderOnMove(0)">
 							<p id="work-duration-text">25</p>
 							<input id="work-duration" type="range" min="5" max="120" value="25">
 						</div>
-						<p>Short Break Duration</p>
-						<div onmousemove="updateOnSliderOnMove(1)" onmouseup="updateOnSliderOnMove(1)">
+						<p class="interval-text">Short Break Duration</p>
+						<div onmousemove="updateOnSliderOnMove(1)" onmousedown="updateOnSliderOnMove(1)">
 							<p id="short-break-duration-text">5</p>
 							<input id="short-break-duration" type="range" min="5" max="25" value="5">
 						</div>
-						<p>Long Break Duration</p>
-						<div onmousemove="updateOnSliderOnMove(2)" onmouseup="updateOnSliderOnMove(2)">
+						<p class="interval-text">Long Break Duration</p>
+						<div onmousemove="updateOnSliderOnMove(2)" onmousedown="updateOnSliderOnMove(2)">
 							<p id="long-break-duration-text">10</p>
 							<input id="long-break-duration" type="range" min="5" max="50" value="10">
 						</div>
-						<p>Long Break Interval</p>
-						<div onmousemove="updateOnSliderOnMove(3)" onmouseup="updateOnSliderOnMove(3)">
+						<p class="interval-text">Long Break Interval</p>
+						<div onmousemove="updateOnSliderOnMove(3)" onmousedown="updateOnSliderOnMove(3)">
 							<p id="long-break-interval-text">4</p>
 							<input id="long-break-interval" type="range" min="10" max="80" value="40">
 						</div>
 					</div>
 
 					<div id="custom-interval-div-close" onclick="toggleSideNavigation(0)">
-						<button>Close</button>
+						<button class="interval-text">Close</button>
 					</div>
 				</div> <!-- interval-sidebar-inner -->
 			</div>
@@ -88,7 +88,7 @@
 			<div id="main-ui">
 				<div id="container">
 						<div id="timer-left"></div>
-						<div id="countdown"></div>
+						<!--<div id="countdown"></div>-->
 						<div id="timer-right"></div>
 				</div>
 			</div>
