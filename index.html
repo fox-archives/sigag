@@ -4,8 +4,9 @@
 		<meta charset="utf-8">
 		<title>Sigag</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="app/css/main.css" />
-		<link rel="stylesheet" type="text/css" href="app/css/progress-bar.css" />
+		<link rel="stylesheet" type="text/css" href="app/css/main.min.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/fonts.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/progress-bar.css"/>
 	</head>
 		<!-- MAIN NAVIGATION -->
 		<body>
@@ -45,31 +46,32 @@
 			<!-- CHOOSE INTERVAL SIDEBAR -->
 			<div id="change-interval-sidebar">
 				<div id="change-interval-sidebar-inner">
-					<p class="interval-text">Recommended Intervals</p>
-					<button onclick="updateAllIntervalComponents(25, 5, 10, 4)">25 work 5 break</button>
-					<button onclick="updateAllIntervalComponents(55, 10, 20, 4)">55 work 10 break</button>
-					<button onclick="updateAllIntervalComponents(90, 15, 20, 3)">90 work 15 break</button>
+					<h1 class="interval-text">Change Timer Interval</h1>
+					<h2 class="interval-text">Recommended Intervals</h2>
+					<button onclick="updateAllIntervalComponents(25, 5, 10, 4)"><p>25 work 5 break</p></button>
+					<button onclick="updateAllIntervalComponents(55, 10, 20, 4)"><p>55 work 10 break</p></button>
+					<button onclick="updateAllIntervalComponents(90, 15, 20, 3)"><p>90 work 15 break</p></button>
 
-					<p class="interval-text">Custom Interval</p>
-					<button id="custom-interval"><b id="custom-interval-work">25</b> work <b id="custom-interval-break">5</b> break</button>
+					<h2 class="interval-text">Custom Interval</h2>
+					<button id="custom-interval"><p><b id="custom-interval-work">25</b> work <b id="custom-interval-break">5</b> break</p></button>
 
 					<div id="time-sliders">
-						<p class="interval-text">Work Duration</p>
+						<h2 class="interval-text">Work Duration</h2>
 						<div onmousemove="updateOnSliderOnMove(0)" onmousedown="updateOnSliderOnMove(0)">
 							<p id="work-duration-text">25</p>
 							<input id="work-duration" type="range" min="5" max="120" value="25">
 						</div>
-						<p class="interval-text">Short Break Duration</p>
+						<h2 class="interval-text">Short Break Duration</h2>
 						<div onmousemove="updateOnSliderOnMove(1)" onmousedown="updateOnSliderOnMove(1)">
 							<p id="short-break-duration-text">5</p>
 							<input id="short-break-duration" type="range" min="5" max="25" value="5">
 						</div>
-						<p class="interval-text">Long Break Duration</p>
+						<h2 class="interval-text">Long Break Duration</h2>
 						<div onmousemove="updateOnSliderOnMove(2)" onmousedown="updateOnSliderOnMove(2)">
 							<p id="long-break-duration-text">10</p>
 							<input id="long-break-duration" type="range" min="5" max="50" value="10">
 						</div>
-						<p class="interval-text">Long Break Interval</p>
+						<h2 class="interval-text">Long Break Interval</h2>
 						<div onmousemove="updateOnSliderOnMove(3)" onmousedown="updateOnSliderOnMove(3)">
 							<p id="long-break-interval-text">4</p>
 							<input id="long-break-interval" type="range" min="10" max="80" value="40">

@@ -27,7 +27,7 @@ function updateOnSliderOnMove(sliderNumber) {
     }
     if(sliderNumber == 3)
     {
-        document.getElementById("long-break-interval-text").innerHTML = Math.floor(document.getElementById("long-break-interval").value/10);
+        document.getElementById("long-break-interval-text").innerHTML = Math.round(document.getElementById("long-break-interval").value/10);
     }
 }
 
@@ -51,33 +51,3 @@ function changeCustomIntervalText(workDuration, shortBreakDuration, longBreakDur
     document.getElementById("custom-interval-work").innerHTML = workDuration;
     document.getElementById("custom-interval-break").innerHTML = shortBreakDuration;
 }
-
-
-
-/*
-function startChangeSliderText(sliderNumber) {
-    if(sliderNumber === 0)
-    {
-        document.getElementById("work-duration-text").innerHTML = document.getElementById("work-duration").value;
-
-    }
-    else if(sliderNumber === 1)
-    {
-        document.getElementById("short-break-duration-text").innerHTML = document.getElementById("short-break-duration").value;
-
-    }
-    else if(sliderNumber === 2)
-    {
-        document.getElementById("long-break-duration-text").innerHTML = document.getElementById("long-break-duration").value;
-
-    }
-    else if(sliderNumber === 3)
-    {
-        document.getElementById("long-break-interval-text").innerHTML = Math.floor(document.getElementById("long-break-interval").value/10);
-
-    }
-    else {
-
-    }
-}
-*/
