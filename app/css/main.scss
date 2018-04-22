@@ -1,0 +1,184 @@
+@import "./open-color.scss";
+@import "./fonts.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: source_sans_proregular;
+    user-select: none;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #0e83cd;
+}
+
+p, a{
+    color: white;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+
+button {
+    margin: 5px 10px 5px 10px;
+    background-color: #f06060;
+    width: 150px;
+    height: 45px;
+    border: none;
+    border-radius: 2px;
+    outline: none;    /* Removes blue outline around button on click (Chrome)*/
+    box-shadow: 2px 2px 2px 2px black;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: inner-block;
+
+}
+
+input[type = range] {
+    margin: 5px 10px 5px 0px;
+    -webkit-appearance: none;
+    outline: none;
+    background: none;
+    height: 16px;
+    width: 200px;
+}
+
+intput[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    margin-top: -5px;
+    -webkit-appearance: none;
+    border: 1px solid black;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: #ab3c3c
+
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    box-shadow: 2px 2px 2px 2px black;
+    background: #fff;
+}
+
+/* TITLEBAR START */
+#titlebarContainer {
+	position: fixed;
+    display: flex;
+    height: 40px;
+    width: 100%;
+    background-color: #0a71b3;
+	justify-content: space-between;
+    -webkit-app-region: drag;
+}
+
+/* Title-bar left and title-bar right have no drag */
+#titlebarContainer > div {
+    -webkit-app-region: no-drag;
+}
+
+#titlebar-left {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: row;
+}
+
+#titlebar-right {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+}
+
+.titlebar-svg {
+	width: 30px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+#clock-svg {
+    width: 25px;
+	height: 25px;
+
+    margin-left: 10px;
+
+    padding-top: 2.5px;
+}
+
+#statistics-svg {
+    padding-left: 8px;
+}
+
+#close-application-svg {
+    padding-right: 5px;
+}
+
+#minimize-application-svg {
+    padding-right: 4px;
+}
+
+
+#clock:hover > #clock-svg, #statistics:hover > #statistics-svg, #minimize-application:hover > #minimize-application-svg, #close-application:hover > #close-application-svg {
+	stroke: #f06060;
+	transition: stroke 200ms;
+}
+
+
+/* TITLEBAR ENDS */
+
+/* CHANGE INTERVAL SIDEBAR START */
+#change-interval-sidebar {
+    position: fixed;
+    background: #0e83cd;
+    margin-top: 40px;
+
+    left: -400px;
+    width: 400px;
+    height: 100%;
+    overflow-x: hidden; /* Disable the horizontal scroll */
+    transition: 0.5s ease-in-out;
+}
+
+#change-interval-sidebar {
+    text-align: center;
+}
+
+#time-sliders > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#time-sliders > div > p {
+    margin-right: 10px;
+    width: 20px
+}
+
+.interval-text {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+/* CHANGE INTERVAL SIDEBAR END*/
+
+#main-ui {
+    position: fixed;
+}
+
+/* MAIN CLOCK START */
+#container {
+    display: grid;
+    left: 0;
+    right: 0;
+    grid-template-columns: 6% 85% 6%;
+    grid-column-gap: 1.5%;
+    grid-template-row: 35px auto;
+}
