@@ -6,33 +6,43 @@
     padding: 0;
     font-family: source_sans_proregular;
     user-select: none;
+    overflow: hidden; /* Remove scrollbars */
 }
 
 body {
     margin: 0px;
     padding: 0px;
-    background-color: #0e83cd;
+    background-color: $oc-gray-0;
 }
 
-p, a{
-    color: white;
+h1, h2, h3, h4, h5, h6, p {
+    text-align: left;
 }
+
 button::-moz-focus-inner {
   border: 0;
 }
 
 button {
     margin: 5px 10px 5px 10px;
-    background-color: #f06060;
+    background-color: $oc-green-3;
+    box-shadow: 2px 2px 2px 2px $oc-gray-5;
     width: 150px;
     height: 45px;
-    border: none;
-    border-radius: 2px;
-    outline: none;    /* Removes blue outline around button on click (Chrome)*/
-    box-shadow: 2px 2px 2px 2px black;
+    border: 1px solid $oc-green-9;
+    border-radius: 50px;
+    outline: none;    /* Removes blu outline around button on click (Chrome)*/
     cursor: pointer;
-    text-transform: uppercase;
-    display: inner-block;
+
+}
+
+button > p {
+    text-align: center;
+    font-family: source_sans_proregular;
+    font-size: 1.25em;
+}
+
+button:active {
 
 }
 
@@ -50,22 +60,22 @@ intput[type=range]:focus {
 }
 
 input[type=range]::-webkit-slider-thumb {
-    margin-top: -5px;
+    margin-top: -7px;
     -webkit-appearance: none;
-    border: 1px solid black;
+    border: 1px solid $oc-green-9;
     height: 16px;
     width: 16px;
     cursor: pointer;
     border-radius: 10px;
-    background: #ab3c3c
+    background: $oc-green-7;
 
 }
 
 input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
     height: 5px;
-    box-shadow: 2px 2px 2px 2px black;
-    background: #fff;
+    background: $oc-green-4;
+    border: 1px solid $oc-green-9;
 }
 
 /* TITLEBAR START */
@@ -74,28 +84,24 @@ input[type=range]::-webkit-slider-runnable-track {
     display: flex;
     height: 40px;
     width: 100%;
-    background-color: #0a71b3;
+    background-color: $oc-gray-0;
 	justify-content: space-between;
     -webkit-app-region: drag;
 }
 
-/* Title-bar left and title-bar right have no drag */
-#titlebarContainer > div {
-    -webkit-app-region: no-drag;
-}
-
+/* Title-bar left and titlebar right have no drag */
 #titlebar-left {
 	position: relative;
 	display: flex;
-	justify-content: flex-end;
 	flex-direction: row;
+    -webkit-app-region: no-drag;
 }
 
 #titlebar-right {
 	position: relative;
 	display: flex;
-	justify-content: flex-start;
 	flex-direction: row;
+    -webkit-app-region: no-drag;
 }
 
 .titlebar-svg {
@@ -107,14 +113,12 @@ input[type=range]::-webkit-slider-runnable-track {
 #clock-svg {
     width: 25px;
 	height: 25px;
-
     margin-left: 10px;
-
     padding-top: 2.5px;
 }
 
 #statistics-svg {
-    padding-left: 8px;
+    padding-left: 9px;
 }
 
 #close-application-svg {
@@ -124,38 +128,36 @@ input[type=range]::-webkit-slider-runnable-track {
 #minimize-application-svg {
     padding-right: 4px;
 }
-
-
-#clock:hover > #clock-svg, #statistics:hover > #statistics-svg, #minimize-application:hover > #minimize-application-svg, #close-application:hover > #close-application-svg {
-	stroke: #f06060;
-	transition: stroke 200ms;
+#clock-svg, #statistics-svg, #minimize-application-svg, #close-application-svg {
+    stroke: $oc-gray-9;
 }
 
-
+#clock:hover > #clock-svg, #statistics:hover > #statistics-svg, #minimize-application:hover > #minimize-application-svg, #close-application:hover > #close-application-svg {
+	stroke: $oc-blue-9;
+	transition: stroke 200ms;
+}
 /* TITLEBAR ENDS */
 
 /* CHANGE INTERVAL SIDEBAR START */
 #change-interval-sidebar {
     position: fixed;
-    background: #0e83cd;
+    background: $oc-gray-0;
     margin-top: 40px;
-
-    left: -400px;
-    width: 400px;
-    height: 100%;
+    left: -100%;
+    width: 100%;
     overflow-x: hidden; /* Disable the horizontal scroll */
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
-#change-interval-sidebar {
-    text-align: center;
+#change-interval-sidebar-inner {
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #time-sliders > div {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-
+    justify-content: left;
 }
 
 #time-sliders > div > p {
