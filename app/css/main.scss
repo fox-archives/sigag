@@ -4,36 +4,40 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: source_sans_proregular;
     user-select: none;
     overflow: hidden; /* Remove scrollbars */
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
     background-color: $oc-gray-0;
-}
-
-h1, h2, h3, h4, h5, h6, p {
     text-align: left;
 }
 
+h1 {
+    font-family: source_sans_proregular;
+    font-size: 2em;
+}
+
+h2 {
+    font-family: source_sans_prolight;
+    font-size: 1.25em;
+}
+
+/* BUTTONS */
 button::-moz-focus-inner {
-  border: 0;
+    border: 0;
 }
 
 button {
-    margin: 5px 10px 5px 10px;
-    background-color: $oc-green-3;
+    display: inline-block;
+    margin: 5px 10px 5px 0px;
+    padding: 4px 16px 2px 16px;
+    background-color: $oc-blue-3;
+    border: 1px solid $oc-blue-9;
     box-shadow: 2px 2px 2px 2px $oc-gray-5;
-    width: 150px;
-    height: 45px;
-    border: 1px solid $oc-green-9;
-    border-radius: 50px;
-    outline: none;    /* Removes blu outline around button on click (Chrome)*/
+    border-radius: 5px;
     cursor: pointer;
-
+    outline: none;    /* Removes blu outline around button on click (Chrome)*/
 }
 
 button > p {
@@ -43,16 +47,16 @@ button > p {
 }
 
 button:active {
-
 }
 
+/* INPUT RANGES SLIDERS */
 input[type = range] {
-    margin: 5px 10px 5px 0px;
-    -webkit-appearance: none;
-    outline: none;
-    background: none;
     height: 16px;
     width: 200px;
+    margin: 5px 10px 5px 0px;
+    background: none;
+    outline: none;
+    -webkit-appearance: none;
 }
 
 intput[type=range]:focus {
@@ -62,20 +66,20 @@ intput[type=range]:focus {
 input[type=range]::-webkit-slider-thumb {
     margin-top: -7px;
     -webkit-appearance: none;
-    border: 1px solid $oc-green-9;
+    border: 1px solid $oc-blue-9;
     height: 16px;
     width: 16px;
     cursor: pointer;
     border-radius: 10px;
-    background: $oc-green-7;
+    background: $oc-blue-7;
 
 }
 
 input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
     height: 5px;
-    background: $oc-green-4;
-    border: 1px solid $oc-green-9;
+    background: $oc-blue-4;
+    border: 1px solid $oc-blue-9;
 }
 
 /* TITLEBAR START */
@@ -84,6 +88,7 @@ input[type=range]::-webkit-slider-runnable-track {
     display: flex;
     height: 40px;
     width: 100%;
+    box-shadow: 2px 2px 2px 2px $oc-gray-2;
     background-color: $oc-gray-0;
 	justify-content: space-between;
     -webkit-app-region: drag;
@@ -141,12 +146,13 @@ input[type=range]::-webkit-slider-runnable-track {
 /* CHANGE INTERVAL SIDEBAR START */
 #change-interval-sidebar {
     position: fixed;
-    background: $oc-gray-0;
+    background: $oc-gray-1;
     margin-top: 40px;
     left: -100%;
     width: 100%;
     overflow-x: hidden; /* Disable the horizontal scroll */
     transition: 0.3s ease-in-out;
+    height: 100%;
 }
 
 #change-interval-sidebar-inner {
@@ -166,9 +172,18 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 .interval-text {
-    margin-top: 20px;
-    margin-bottom: 5px;
+    margin-top: 15px;
 }
+
+#recommended-intervals {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+#ime-sliders > div > {
+    
+}
+
 /* CHANGE INTERVAL SIDEBAR END*/
 
 #main-ui {
