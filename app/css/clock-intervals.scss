@@ -17,8 +17,6 @@
 }
 
 #time-sliders > div {
-    display: flex;
-    flex-direction: row;
     justify-content: left;
 }
 
@@ -29,6 +27,7 @@
 
 .interval-text {
     margin-top: 15px;
+    display: inline-block;
 }
 
 #recommended-intervals {

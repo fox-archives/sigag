@@ -1,15 +1,16 @@
 function updateAllIntervalComponents(workDuration, shortBreakDuration, longBreakDuration, longBreakInterval) {
+    // Changes text by slider, position of slider, and button text of all sliders
     changeSliderText(workDuration, shortBreakDuration, longBreakDuration, longBreakInterval);
     changeSliderPosition(workDuration, shortBreakDuration, longBreakDuration, longBreakInterval);
     changeCustomIntervalText(workDuration, shortBreakDuration, longBreakDuration, longBreakInterval);
 }
 
 function updateOnSliderOnMove(sliderNumber) {
-    /* 0 for Work Duration
-     * 1 for Short Break Duration
-     * 2 for Long Break Duration
-     * 3 for Long Break Interval
-     */
+     // Updates the text for a type of break/work text, depending on value of 'sliderNumber'
+     // 0 for Work Duration
+     // 1 for Short Break Duration
+     // 2 for Long Break Duration
+     // 3 for Long Break Interval
 
     if(sliderNumber == 0)
     {

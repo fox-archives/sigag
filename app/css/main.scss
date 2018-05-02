@@ -2,6 +2,7 @@
 @import "clock-intervals.scss";
 @import "input.scss";
 @import "titlebar.scss";
+@import "timer-clock.scss";
 
 * {
     margin: 0;
@@ -23,18 +24,4 @@ h1 {
 h2 {
     font-family: source_sans_prolight;
     font-size: 1.25em;
-}
-
-#main-ui {
-    position: fixed;
-}
-
-/* MAIN CLOCK START */
-#container {
-    display: grid;
-    left: 0;
-    right: 0;
-    grid-template-columns: 6% 85% 6%;
-    grid-column-gap: 1.5%;
-    grid-template-row: 35px auto;
 }
