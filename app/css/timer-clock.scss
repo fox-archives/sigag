@@ -1,12 +1,12 @@
 #main-ui {
-    position: fixed;
+  position: fixed;
 }
 
 #container {
-    display: grid;
-    left: 0;
-    right: 0;
-    grid-template-columns: 6% 85% 6%;
-    grid-column-gap: 1.5%;
-    grid-template-row: 35px auto;
+  display: grid;
+  left: 0;
+  right: 0;
+  grid-template-columns: 6% 85% 6%;
+  grid-column-gap: 1.5%;
+  grid-template-row: 35px auto;
 }
