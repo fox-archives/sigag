@@ -3,11 +3,11 @@ document.getElementById('close-application').addEventListener('click', closeWind
 document.getElementById('minimize-application').addEventListener('click', minimizeWindow);
 
 function closeWindow () {
-    var window = remote.getCurrentWindow()
-    window.close()
+  var window = remote.getCurrentWindow()
+  window.close()
 }
 
 function minimizeWindow(){
-    var window = remote.getCurrentWindow()
-    window.minimize()
+  var window = remote.getCurrentWindow()
+  window.minimize()
 }

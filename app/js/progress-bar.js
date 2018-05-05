@@ -1,14 +1,12 @@
 /*window.onload = function onLoad() {
-    var circle = new ProgressBar.Circle('#progress', {
-        color: '#FCB03C',
-        duration: 2000,
-        easing: 'easeInOut',
-        strokeWidth: '4'
+  var circle = new ProgressBar.Circle('#progress', {
+    color: '#FCB03C',
+    duration: 2000,
+    easing: 'easeInOut',
+    strokeWidth: '4'
+  });
 
-
-    });
-
-    circle.animate(1);
+  circle.animate(1);
 }; */
 
 var bar = new ProgressBar.Circle('#countdown', {
