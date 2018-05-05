@@ -1,3 +1,4 @@
+//main: main.scss
 #change-interval-sidebar {
   position: fixed;
   background: $oc-gray-1;
@@ -25,7 +26,6 @@
 
 .interval-text {
   margin-top: 15px;
-  display: inline-block;
 }
 
 #recommended-intervals {

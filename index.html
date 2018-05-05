@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title>Sigag</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="app/css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/main.min.css"/>
 	</head>
 		<!-- MAIN NAVIGATION -->
 		<body>
@@ -44,7 +44,7 @@
 			<!-- CHOOSE INTERVAL SIDEBAR -->
 			<div id="change-interval-sidebar">
 				<div id="change-interval-sidebar-inner">
-					<h1 class="interval-text">Change Timer Interval</h1>
+					<h1 class="interval-text">Change Timer Interval</h2>
 					<h2 class="interval-text" id="recommended-intervals">Recommended Intervals</h2>
 					<button onclick="updateAllIntervalComponents(25, 5, 10, 4)"><p>25 : 5</p></button>
 					<button onclick="updateAllIntervalComponents(55, 10, 20, 4)"><p>55 : 10</p></button>
@@ -55,26 +55,17 @@
 
 					<div id="time-sliders">
 						<h2 class="interval-text">Work Duration: </h2>
-						<p id="work-duration-text">25</p>
-						<div onmousemove="updateOnSliderOnMove(0)" onmousedown="updateOnSliderOnMove(0)">
-							<input id="work-duration" type="range" min="5" max="120" value="25">
-						</div>
+							<p id="work-duration-text">25</p>
+							<input id="work-duration" type="range" min="5" max="120" value="25" onmousemove="updateOnSliderOnMove(0)" onmousedown="updateOnSliderOnMove(0)">
 						<h2 class="interval-text">Short Break Duration</h2>
-						<p id="short-break-duration-text">5</p>
-						<div onmousemove="updateOnSliderOnMove(1)" onmousedown="updateOnSliderOnMove(1)">
-
-							<input id="short-break-duration" type="range" min="5" max="25" value="5">
-						</div>
+							<p id="short-break-duration-text">5</p>
+							<input id="short-break-duration" type="range" min="5" max="25" value="5" onmousemove="updateOnSliderOnMove(1)" onmousedown="updateOnSliderOnMove(1)">
 						<h2 class="interval-text">Long Break Duration</h2>
-						<p id="long-break-duration-text">10</p>
-						<div onmousemove="updateOnSliderOnMove(2)" onmousedown="updateOnSliderOnMove(2)">
-							<input id="long-break-duration" type="range" min="5" max="50" value="10">
-						</div>
+							<p id="long-break-duration-text">10</p>
+							<input id="long-break-duration" type="range" min="5" max="50" value="10" onmousemove="updateOnSliderOnMove(2)" onmousedown="updateOnSliderOnMove(2)">
 						<h2 class="interval-text">Long Break Interval</h2>
-						<p id="long-break-interval-text">4</p>
-						<div onmousemove="updateOnSliderOnMove(3)" onmousedown="updateOnSliderOnMove(3)">
-							<input id="long-break-interval" type="range" min="10" max="80" value="40">
-						</div>
+							<p id="long-break-interval-text">4</p>
+							<input id="long-break-interval" type="range" min="10" max="80" value="40" onmousemove="updateOnSliderOnMove(3)" onmousedown="updateOnSliderOnMove(3)">
 					</div>
 
 					<div id="custom-interval-div-close" onclick="toggleSideNavigation(0)">
