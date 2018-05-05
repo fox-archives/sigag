@@ -1,8 +1,12 @@
+@import "open-color.scss";
+@import "fonts.scss";
+
 @import "buttons.scss";
 @import "clock-intervals.scss";
 @import "input.scss";
-@import "titlebar.scss";
+@import "progress-bar.scss";
 @import "timer-clock.scss";
+@import "titlebar.scss";
 
 * {
     margin: 0;
