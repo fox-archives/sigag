@@ -1,16 +1,5 @@
-/*window.onload = function onLoad() {
-  var circle = new ProgressBar.Circle('#progress', {
-    color: '#FCB03C',
-    duration: 2000,
-    easing: 'easeInOut',
-    strokeWidth: '4'
-  });
-
-  circle.animate(1);
-}; */
-
 var bar = new ProgressBar.Circle('#countdown', {
-  color: '#aaa',
+  color: '#868e96',
   // This has to be the same size as the maximum width to
   // prevent clipping
   strokeWidth: 4,
@@ -20,8 +9,8 @@ var bar = new ProgressBar.Circle('#countdown', {
   text: {
     autoStyleContainer: true
   },
-  from: { color: '#C6426E', width: 4 },
-  to: { color: '#642B73', width: 4 },
+  from: { color: '#adb5bd', width: 4 },
+  to: { color: '#343a40', width: 4 },
   // Set default step function for all animate calls
 
   step: function(state, circle) {

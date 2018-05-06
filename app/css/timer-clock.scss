@@ -5,9 +5,9 @@
 
 #container {
   display: grid;
-  left: 0;
-  right: 0;
-  grid-template-columns: 6% 85% 6%;
-  grid-column-gap: 1.5%;
-  grid-template-row: 35px auto;
+  max-width: 350px;
+  grid-template-columns: 10% 80% 10%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
