@@ -54,18 +54,17 @@
 					<button id="custom-interval"><p><b id="custom-interval-work">25</b> work <b id="custom-interval-break">5</b> break</p></button>
 
 					<div id="time-sliders">
-						<h2 class="interval-text">Work Duration: </h2>
-							<p id="work-duration-text">25</p>
-							<input id="work-duration" type="range" min="5" max="120" value="25" onmousemove="updateOnSliderOnMove(0)" onmousedown="updateOnSliderOnMove(0)">
-						<h2 class="interval-text">Short Break Duration</h2>
-							<p id="short-break-duration-text">5</p>
-							<input id="short-break-duration" type="range" min="5" max="25" value="5" onmousemove="updateOnSliderOnMove(1)" onmousedown="updateOnSliderOnMove(1)">
-						<h2 class="interval-text">Long Break Duration</h2>
-							<p id="long-break-duration-text">10</p>
-							<input id="long-break-duration" type="range" min="5" max="50" value="10" onmousemove="updateOnSliderOnMove(2)" onmousedown="updateOnSliderOnMove(2)">
-						<h2 class="interval-text">Long Break Interval</h2>
-							<p id="long-break-interval-text">4</p>
-							<input id="long-break-interval" type="range" min="10" max="80" value="40" onmousemove="updateOnSliderOnMove(3)" onmousedown="updateOnSliderOnMove(3)">
+						<h2 id="work-duration-text" class="interval-text">Work: 25 minutes</h2>
+						<input id="work-duration" type="range" min="5" max="120" value="25" onmousemove="updateOnSliderOnMove(0)" onmousedown="updateOnSliderOnMove(0)">
+
+						<h2 id="short-break-duration-text" class="interval-text">Break: 5 minutes</h2>
+						<input id="short-break-duration" type="range" min="5" max="25" value="5" onmousemove="updateOnSliderOnMove(1)" onmousedown="updateOnSliderOnMove(1)">
+
+						<h2 id="long-break-duration-text" class="interval-text">Long Break: 10 minutes</h2>
+						<input id="long-break-duration" type="range" min="5" max="50" value="10" onmousemove="updateOnSliderOnMove(2)" onmousedown="updateOnSliderOnMove(2)">
+
+						<h2 id="long-break-interval-text" class="interval-text">Interval: 4</h2>
+						<input id="long-break-interval" type="range" min="10" max="80" value="40" onmousemove="updateOnSliderOnMove(3)" onmousedown="updateOnSliderOnMove(3)">
 					</div>
 
 					<div id="custom-interval-div-close" onclick="toggleSideNavigation(0)">

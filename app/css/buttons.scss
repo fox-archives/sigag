@@ -11,17 +11,19 @@ button:hover > p {
   color: $oc-gray-1;
   transition: color 0.2s ease-in-out;
 }
+
 button {
   // Normal
   display: inline-block;
-  margin: 5px 10px 5px 0px;
-  padding: 4px 16px 2px 16px;
+  margin: 5px 10px 5px 0;
+  padding: 4px 16px 2px;
   border: 1px solid $oc-gray-8;
   background-color: $oc-gray-1;
   box-shadow: 3px 3px 5px $oc-gray-3;
   border-radius: 9px;
   cursor: pointer;
-  outline: none;    /* Removes blu outline around button on click (Chrome)*/
+  outline: none;
+  /* Removes blu outline around button on click (Chrome)*/
   transition: background-color 0.2s ease-in-out;
 }
 
@@ -42,5 +44,4 @@ button > p {
   font-size: 1.25em;
 }
 
-button:active {
-}
+button:active {}

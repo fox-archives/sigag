@@ -14,30 +14,30 @@ function updateOnSliderOnMove(sliderNumber) {
 
   if(sliderNumber == 0)
   {
-    document.getElementById("work-duration-text").innerHTML = document.getElementById("work-duration").value;
+    document.getElementById("work-duration-text").innerHTML = "Work: " + document.getElementById("work-duration").value + " minutes";
     document.getElementById("custom-interval-work").innerHTML = document.getElementById("work-duration").value;
   }
   if(sliderNumber == 1)
   {
-    document.getElementById("short-break-duration-text").innerHTML = document.getElementById("short-break-duration").value;
+    document.getElementById("short-break-duration-text").innerHTML = "Break: " + document.getElementById("short-break-duration").value + " minutes";
     document.getElementById("custom-interval-break").innerHTML = document.getElementById("short-break-duration").value;
   }
   if(sliderNumber == 2)
   {
-    document.getElementById("long-break-duration-text").innerHTML = document.getElementById("long-break-duration").value;
+    document.getElementById("long-break-duration-text").innerHTML = "Long Break: " + document.getElementById("long-break-duration").value + " minutes";
   }
   if(sliderNumber == 3)
   {
-    document.getElementById("long-break-interval-text").innerHTML = Math.round(document.getElementById("long-break-interval").value/10);
+    document.getElementById("long-break-interval-text").innerHTML = "Interval: " + Math.round(document.getElementById("long-break-interval").value/10);
   }
 }
 
 function changeSliderText (workDuration, shortBreakDuration, longBreakDuration, longBreakInterval) {
   //Change text left of slider
-  document.getElementById("work-duration-text").innerHTML = workDuration;
-  document.getElementById("short-break-duration-text").innerHTML = shortBreakDuration;
-  document.getElementById("long-break-duration-text").innerHTML = longBreakDuration;
-  document.getElementById("long-break-interval-text").innerHTML = longBreakInterval;
+  document.getElementById("work-duration-text").innerHTML = "Work: " + workDuration + " minutes";
+  document.getElementById("short-break-duration-text").innerHTML = "Short Break: " + shortBreakDuration + " minutes";
+  document.getElementById("long-break-duration-text").innerHTML = "Long Break: " + longBreakDuration + " minutes";
+  document.getElementById("long-break-interval-text").innerHTML = "Long Break Interval: " + longBreakInterval;
 }
 
 function changeSliderPosition(workDuration, shortBreakDuration, longBreakDuration, longBreakInterval) {
