@@ -35,9 +35,9 @@ function updateOnSliderOnMove(sliderNumber) {
 function changeSliderText (workDuration, shortBreakDuration, longBreakDuration, longBreakInterval) {
   //Change text left of slider
   document.getElementById("work-duration-text").innerHTML = "Work: " + workDuration + " minutes";
-  document.getElementById("short-break-duration-text").innerHTML = "Short Break: " + shortBreakDuration + " minutes";
+  document.getElementById("short-break-duration-text").innerHTML = "Break: " + shortBreakDuration + " minutes";
   document.getElementById("long-break-duration-text").innerHTML = "Long Break: " + longBreakDuration + " minutes";
-  document.getElementById("long-break-interval-text").innerHTML = "Long Break Interval: " + longBreakInterval;
+  document.getElementById("long-break-interval-text").innerHTML = "Interval: " + longBreakInterval;
 }
 
 function changeSliderPosition(workDuration, shortBreakDuration, longBreakDuration, longBreakInterval) {

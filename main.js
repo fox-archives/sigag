@@ -1,12 +1,16 @@
 const electron = require('electron')
+
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 //Above three lines can be compressed into const {app, BrowserWindow} = require('electron')
 
 const path = require('path')
 const url = require('url')
-
+//const fs = require('fs'); //Use FS module
+//const Store = require('./store.js');
 let zMainWindow
+
+
 
 function zCreateWindow() {
   //Creates the browser window
