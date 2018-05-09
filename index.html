@@ -10,14 +10,14 @@
 		<body>
 			<nav id="titlebarContainer">
 				<div id="titlebar-left">
-					<div id="clock" onclick="toggleSideNavigation(1)">
+					<div id="clock" onclick="toggleCustomIntervalSidebar(1)">
 						<svg id="clock-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<circle cx="12" cy="12" r="10"></circle>
 							<polyline points="12 6 12 12 16 14"></polyline>
 						</svg>
 					</div>
 
-					<div id="statistics">
+					<div id="statistics" onclick="toggleStatisticsSidebar(1)">
 						<svg id="statistics-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 								<line x1="18" y1="20" x2="18" y2="10"></line>
 								<line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line>
@@ -67,13 +67,25 @@
 						<input id="long-break-interval" type="range" min="10" max="80" value="40" onmousemove="updateOnSliderOnMove(3)" onmousedown="updateOnSliderOnMove(3)">
 					</div>
 
-					<button class="interval-text" id="custom-interval-save" onclick="toggleSideNavigation(0)"><p>Apply</p></button>
-					<button class="interval-text" id="custom-interval-no-save" onclick="toggleSideNavigation(0)"><p>Close</p></button>
+					<button class="interval-text" id="custom-interval-save" onclick="toggleCustomIntervalSidebar(0)"><p>Apply</p></button>
+					<button class="interval-text" id="custom-interval-no-save" onclick="toggleCustomIntervalSidebar(0)"><p>Close</p></button>
 
 				</div> <!-- interval-sidebar-inner -->
 			</div>
 			<!-- END CHOOSE INTERVAL SIDEBAR -->
 
+			<!-- START GET STATISTICS SIDEBAR -->
+			<div id="get-statistics">
+				<div id="get-statistics-inner">
+					<h1 class="statistics-text">Get Statistics</h1>
+					<h2 class ="statistics-text">Data Set 1</h2>
+					<div id="temporary-whitespace"></div>
+					<h2 class ="statistics-text">Data Set 2</h2>
+					<div id="temporary-whitespace"></div>
+					<button onclick="toggleStatisticsSidebar(0)"><p>Close</p></button>
+				</div>
+			</div>
+			<!-- END GET STATISTICS SIDEBAR -->
 
 			<!-- START COUNTDOWN CLOCK -->
 			<div id="main-ui">

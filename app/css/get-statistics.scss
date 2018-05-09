@@ -1,0 +1,22 @@
+//main: main.scss
+
+#get-statistics {
+  position: fixed;
+  background: $oc-gray-1;
+  margin-top: 40px;
+  left: -100%;
+  width: 100%;
+  overflow-x: hidden; /* Disable the horizontal scroll */
+  transition: 0.3s ease-in-out;
+  height: 100%;
+  z-index: 1;
+}
+
+#get-statistics-inner {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#temporary-whitespace {
+  height: 100px;
+}
