@@ -1,5 +1,4 @@
 //main: main.scss
-
 #get-statistics {
   position: fixed;
   background: $oc-gray-1;
@@ -19,4 +18,8 @@
 
 #temporary-whitespace {
   height: 100px;
+}
+
+.statistics-text {
+  margin-top: 15px;
 }

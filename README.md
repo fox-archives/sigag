@@ -8,7 +8,7 @@ Study efficiently with an interval timer and track studying habbits using Sigag.
 * Choose from a variety of pre-built themes, or custom-build a theme
 * Set recommended intervals or create a custom interval to study at
 * Configure a break interval, if needed
-* Collect various statitics such as
+* Collect various statistics such as
   * Total work time
   * Total break time
   * Total pauses
@@ -16,3 +16,13 @@ Study efficiently with an interval timer and track studying habbits using Sigag.
 * Extrapolate more statistics from the data collected above
 * Beautifully graph collected ad extrapolated data over any time interval
   * Weekly, week to-date, monthly, month to-date, etc.
+
+## How to Install and Run
+Currently, there are no executables for this program since it is not complete. However, if you wish to run the program, then use the commands below.
+```bash
+$ git clone https://github.com/EanKeen/Sigag
+$ npm install
+$ npm install electron
+$ npm install progressbar.js
+$ npm start
+```

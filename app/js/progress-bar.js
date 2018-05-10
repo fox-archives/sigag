@@ -1,3 +1,23 @@
+function Timer(startTime, endTime)
+{
+    this.startTime = startTime;
+    this.endTime = endTime;
+
+    this.changeStartTime = function(newStartTime) {
+      this.startTime = newStartTime
+    };
+    this.changeEndTime = function(newEndTime) {
+      this.endTime = newEndTime;
+    };
+}
+
+var timer = new Timer(15, 0);
+console.log(timer.startTime);
+
+timer.changeStartTime(30);
+console.log(timer.startTime);
+
+//Create a progress bar that shows the timer that counts down
 var bar = new ProgressBar.Circle('#countdown', {
   color: '#868e96',
   // This has to be the same size as the maximum width to
@@ -9,7 +29,7 @@ var bar = new ProgressBar.Circle('#countdown', {
   text: {
     autoStyleContainer: true
   },
-  from: { color: '#adb5bd', width: 5 },
+  from: { color: /*'#adb5bd'*/'#343a40', width: 5 },
   to: { color: '#343a40', width: 5 },
   // Set default step function for all animate calls
 
@@ -30,4 +50,4 @@ var bar = new ProgressBar.Circle('#countdown', {
 bar.text.style.fontFamily = 'robotomedium';
 bar.text.style.fontSize = '4rem';
 
-bar.animate(1.0);
+bar.animate(0.5);
