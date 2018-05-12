@@ -5,8 +5,8 @@ var bar = new ProgressBar.Circle('#countdown', {
   // prevent clipping
   strokeWidth: 5,
   trailWidth: 0,
-  easing: 'easeInOut',
-  duration: 1000,
+  easing: 'linear',
+  duration: timer.startTime*1000, //In milliseconds
   text: {
     autoStyleContainer: true
   },
@@ -18,13 +18,13 @@ var bar = new ProgressBar.Circle('#countdown', {
     circle.path.setAttribute('stroke', state.color);
     circle.path.setAttribute('stroke-width', state.width);
 
-    //value is the value that shows when the bar is fully loaded
+    // "value" is the value that shows when the bar is fully loaded. The timer.StartTime after circle.value() originally was 25
     var value = timer.startTime - Math.round(circle.value() * timer.startTime);
     if (value === 0) {
-      circle.setText('0');
+      circle.setText('0:0');
     }
     else {
-      circle.setText(value);
+      circle.setText(toMinutesOrSeconds(value, true) + ":" + toMinutesOrSeconds(value, false));
     }
   }
 
