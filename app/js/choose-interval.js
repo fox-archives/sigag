@@ -6,7 +6,7 @@ function updateAllIntervalComponents(workDuration, shortBreakDuration, longBreak
 }
 
 function updateOnSliderOnMove(sliderNumber) {
-  // Updates the text for a type of break/work text, depending on value of 'sliderNumber'
+  // Updates the text (above the slider) for a type of break/work text, depending on value of 'sliderNumber'
   // 0 for Work Duration
   // 1 for Short Break Duration
   // 2 for Long Break Duration
@@ -33,7 +33,7 @@ function updateOnSliderOnMove(sliderNumber) {
 }
 
 function changeSliderText (workDuration, shortBreakDuration, longBreakDuration, longBreakInterval) {
-  //Change text left of slider
+  // Changes text above the slider
   document.getElementById("work-duration-text").innerHTML = "Work: " + workDuration + " minutes";
   document.getElementById("short-break-duration-text").innerHTML = "Break: " + shortBreakDuration + " minutes";
   document.getElementById("long-break-duration-text").innerHTML = "Long Break: " + longBreakDuration + " minutes";
@@ -41,7 +41,7 @@ function changeSliderText (workDuration, shortBreakDuration, longBreakDuration, 
 }
 
 function changeSliderPosition(workDuration, shortBreakDuration, longBreakDuration, longBreakInterval) {
-  //Change Slider Position (values)
+  // Change slider positions (values)
   document.getElementById("work-duration").value = workDuration;
   document.getElementById("short-break-duration").value = shortBreakDuration;
   document.getElementById("long-break-duration").value = longBreakDuration;
@@ -49,6 +49,7 @@ function changeSliderPosition(workDuration, shortBreakDuration, longBreakDuratio
 }
 
 function changeCustomIntervalText(workDuration, shortBreakDuration, longBreakDuration, longBreakInterval) {
+  // Changes the values of text in the customInterval button
   document.getElementById("custom-interval-work").innerHTML = workDuration;
   document.getElementById("custom-interval-break").innerHTML = shortBreakDuration;
 }

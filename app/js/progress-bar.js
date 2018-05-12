@@ -1,8 +1,7 @@
 //Create a progress bar that shows the timer that counts down
 var bar = new ProgressBar.Circle('#countdown', {
   color: '#868e96',
-  // This has to be the same size as the maximum width to
-  // prevent clipping
+  // This has to be the same size as the maximum width to prevent clipping
   strokeWidth: 5,
   trailWidth: 0,
   easing: 'linear',
