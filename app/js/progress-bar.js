@@ -1,22 +1,3 @@
-function Timer(startTime, endTime)
-{
-    this.startTime = startTime;
-    this.endTime = endTime;
-
-    this.changeStartTime = function(newStartTime) {
-      this.startTime = newStartTime
-    };
-    this.changeEndTime = function(newEndTime) {
-      this.endTime = newEndTime;
-    };
-}
-
-var timer = new Timer(15, 0);
-console.log(timer.startTime);
-
-timer.changeStartTime(30);
-console.log(timer.startTime);
-
 //Create a progress bar that shows the timer that counts down
 var bar = new ProgressBar.Circle('#countdown', {
   color: '#868e96',
@@ -37,9 +18,10 @@ var bar = new ProgressBar.Circle('#countdown', {
     circle.path.setAttribute('stroke', state.color);
     circle.path.setAttribute('stroke-width', state.width);
 
-    var value = Math.round(circle.value() * 25);
+    //value is the value that shows when the bar is fully loaded
+    var value = timer.startTime - Math.round(circle.value() * timer.startTime);
     if (value === 0) {
-      circle.setText('');
+      circle.setText('0');
     }
     else {
       circle.setText(value);
@@ -50,4 +32,4 @@ var bar = new ProgressBar.Circle('#countdown', {
 bar.text.style.fontFamily = 'robotomedium';
 bar.text.style.fontSize = '4rem';
 
-bar.animate(0.5);
+bar.animate(1);
