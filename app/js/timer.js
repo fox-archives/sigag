@@ -12,7 +12,12 @@ function toMinutesOrSeconds(timeInSeconds, isMinutes)
   }
   if(isMinutes == false)
   {
-    return timeInSeconds % 60;
+    // If the time im seconds is less than 10, put a 0 beore the ones place
+    if (timeInSeconds % 60 < 10)
+      return "0" + timeInSeconds % 60;
+    else {
+      return timeInSeconds % 60;
+    }
   }
   else
   {

@@ -20,7 +20,7 @@ var bar = new ProgressBar.Circle('#countdown', {
     // "value" is the value that shows when the bar is fully loaded. The timer.StartTime after circle.value() originally was 25
     var value = timer.startTime - Math.round(circle.value() * timer.startTime);
     if (value === 0) {
-      circle.setText('0:0');
+      circle.setText('0:00');
     }
     else {
       circle.setText(toMinutesOrSeconds(value, true) + ":" + toMinutesOrSeconds(value, false));
