@@ -1,0 +1,12 @@
+.countdown {
+  height: 500px;
+}
+
+.countdown > svg {
+  height: 100%;
+  display: inline;
+}
+
+.progressbar-text {
+  user-select: none;
+}

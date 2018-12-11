@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    overflow: hidden; /* Remove scrollbars */
+}
+
+body {
+    background-color: var(--oc-gray-0);
+    text-align: left;
+}
+
+h1 {
+    font-family: source_sans_proregular;
+    font-size: 2em;
+}
+
+h2 {
+    font-family: source_sans_prolight;
+    font-size: 1.25em;
+}
+
+#main-ui {
+  margin-top: 40px;
+  padding-top: 50px;
+  width: 100%;
+}
+
+#countdown {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}

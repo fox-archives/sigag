@@ -4,7 +4,17 @@
 		<meta charset="utf-8">
 		<title>Sigag</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="app/css/main.min.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/open-color.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/fonts.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/buttons.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/choose-interval.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/control-buttons.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/get-statistics.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/input-slider.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/progress-bar.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/timer-clock.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/titlebar.css"/>
 	</head>
 		<!-- MAIN NAVIGATION -->
 		<body>
@@ -87,16 +97,21 @@
 			</div>
 			<!-- END GET STATISTICS SIDEBAR -->
 
-			<!-- START COUNTDOWN CLOCK -->
+			<!-- START MAIN CONTAINERK -->
 			<div id="main-ui">
 				<div id="container">
 						<div id="timer-left"></div>
 						<div id="countdown"></div>
 						<div id="timer-right"></div>
 				</div>
-			</div>
 
-		<!-- END COUNTDOWN CLOCK -->
+				<div id="control-button">
+					<button id="start-button"><p>Start</p></button>
+					<button id="stop-button"><p>Stop</p></button>
+				</div>	
+			</div>
+		<!-- END MAIN CONTAINER -->
+
 		</body>
 		<script src="./app/js/window-manage.js"></script>
 		<script src="./app/js/navigation.js"></script>
