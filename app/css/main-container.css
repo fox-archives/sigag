@@ -18,3 +18,11 @@
   grid-column-start: 2;
   grid-column-end: 3;
 }
+
+#timer-controls {
+  margin: 15px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}

@@ -8,8 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="app/css/fonts.css"/>
 		<link rel="stylesheet" type="text/css" href="app/css/main.css"/>
 
-		<link rel="stylesheet" type="text/css" href="app/css/buttons.css"/>
-		<link rel="stylesheet" type="text/css" href="app/css/control-buttons.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/button.css"/>
 		<link rel="stylesheet" type="text/css" href="app/css/input-slider.css"/>
 		<link rel="stylesheet" type="text/css" href="app/css/progress-bar.css"/>
 
@@ -56,12 +55,12 @@
 				<div id="change-interval-inner">
 					<h1 class="interval-text">Change Timer Interval</h1>
 					<h2 class="interval-text" id="recommended-intervals">Recommended Intervals</h2>
-					<button onclick="updateAllIntervalComponents(25, 5, 10, 4)"><p>25 : 5</p></button>
-					<button onclick="updateAllIntervalComponents(55, 10, 20, 4)"><p>55 : 10</p></button>
-					<button onclick="updateAllIntervalComponents(90, 15, 20, 3)"><p>90 : 15</p></button>
+					<button onclick="updateAllIntervalComponents(25, 5, 10, 4)">25 : 5</button>
+					<button onclick="updateAllIntervalComponents(55, 10, 20, 4)">55 : 10</button>
+					<button onclick="updateAllIntervalComponents(90, 15, 20, 3)">90 : 15</button>
 
 					<h2 class="interval-text">Custom Interval</h2>
-					<button id="custom-interval"><p><b id="custom-interval-work">25</b> work <b id="custom-interval-break">5</b> break</p></button>
+					<button id="custom-interval"><b id="custom-interval-work">25</b> work <b id="custom-interval-break">5</b> break</button>
 
 					<div id="time-sliders">
 						<h2 id="work-duration-text" class="interval-text">Work: 25 minutes</h2>
@@ -77,8 +76,8 @@
 						<input id="long-break-interval" type="range" min="10" max="80" value="40" onmousemove="updateOnSliderOnMove(3)" onmousedown="updateOnSliderOnMove(3)">
 					</div>
 
-					<button class="interval-text" id="custom-interval-save" onclick="toggleCustomIntervalSidebar(0)"><p>Apply</p></button>
-					<button class="interval-text" id="custom-interval-no-save" onclick="toggleCustomIntervalSidebar(0)"><p>Close</p></button>
+					<button class="interval-text" id="custom-interval-save" onclick="toggleCustomIntervalSidebar(0)">Apply</button>
+					<button class="interval-text" id="custom-interval-no-save" onclick="toggleCustomIntervalSidebar(0)">Close</button>
 
 				</div> <!-- interval-sidebar-inner -->
 			</div>
@@ -90,9 +89,7 @@
 					<h1 class="statistics-text">Get Statistics</h1>
 					<h2 class="statistics-text">Data Set 1</h2>
 					<h2 class="statistics-text">Data Set 2</h2>
-					<button onclick="toggleStatisticsSidebar(0)">
-            <p>Close</p>
-          </button>
+					<button onclick="toggleStatisticsSidebar(0)">Close</button>
 				</div>
 			</div>
 			<!-- END GET STATISTICS SIDEBAR -->
@@ -105,10 +102,11 @@
 						<div id="timer-right"></div>
 				</div>
 
-				<div id="control-button">
-					<button id="start-button"><p>Start</p></button>
-					<button id="stop-button"><p>Stop</p></button>
-				</div>	
+				<div id="timer-controls">
+					<button id="start-button">Start</button>
+          <button id="pause-button">Pause</button>
+          <button id="stop-button">Stop</button>
+				</div>
 			</div>
 		<!-- END MAIN CONTAINER -->
 
