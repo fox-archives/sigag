@@ -21,9 +21,7 @@ Study efficiently with an interval timer and track studying habbits using Sigag.
 Currently, there are no executables for this program since it is not complete. However, if you wish to run the program, then use the commands below.
 ```bash
 $ git clone https://github.com/EanKeen/Sigag
-$ cd ./Sigag
+$ cd Sigag
 $ npm install
-$ npm install electron
-$ npm install progressbar.js
 $ npm start
 ```
