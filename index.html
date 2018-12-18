@@ -14,47 +14,45 @@
 		<link rel="stylesheet" type="text/css" href="app/css/input-slider.css"/>
 		<link rel="stylesheet" type="text/css" href="app/css/progress-bar.css"/>
 		<link rel="stylesheet" type="text/css" href="app/css/timer-clock.css"/>
-		<link rel="stylesheet" type="text/css" href="app/css/titlebar.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/titlebar-container.css"/>
 	</head>
 		<!-- MAIN NAVIGATION -->
 		<body>
-			<nav id="titlebarContainer">
-				<div id="titlebar-left">
-					<div id="clock" onclick="toggleCustomIntervalSidebar(1)">
+
+    <!-- START OF TITLEBAR -->
+			<nav id="titlebar-container">
+					<div id="clock" class="titlebar-icon" onclick="toggleCustomIntervalSidebar(1)">
 						<svg id="clock-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<circle cx="12" cy="12" r="10"></circle>
 							<polyline points="12 6 12 12 16 14"></polyline>
 						</svg>
 					</div>
 
-					<div id="statistics" onclick="toggleStatisticsSidebar(1)">
+					<div id="statistics" class="titlebar-icon" onclick="toggleStatisticsSidebar(1)">
 						<svg id="statistics-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 								<line x1="18" y1="20" x2="18" y2="10"></line>
 								<line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line>
 							</svg>
 					</div>
-				</div>
-				<div id="titlebar-right">
-					<div id="minimize-application">
+					<div id="minimize-application" class="titlebar-icon">
 						<svg id="minimize-application-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 								<line x1="5" y1="12" x2="19" y2="12"></line>
 							</svg>
 					</div>
 
-					<div id="close-application">
+					<div id="close-application" class="titlebar-icon">
 						<svg id="close-application-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<line x1="18" y1="6" x2="6" y2="18"></line>
 							<line x1="6" y1="6" x2="18" y2="18"></line>
 							</svg>
 					</div>
-				</nav>
-			</div> <!-- Titlebar Container -->
+			</nav>
 			<!-- END OF TITLEBAR -->
 
-			<!-- CHOOSE INTERVAL SIDEBAR -->
+			<!-- START OF CHANGE INTERVAL SIDEBAR -->
 			<div id="change-interval-sidebar">
 				<div id="change-interval-sidebar-inner">
-					<h1 class="interval-text">Change Timer Interval</h2>
+					<h1 class="interval-text">Change Timer Interval</h1>
 					<h2 class="interval-text" id="recommended-intervals">Recommended Intervals</h2>
 					<button onclick="updateAllIntervalComponents(25, 5, 10, 4)"><p>25 : 5</p></button>
 					<button onclick="updateAllIntervalComponents(55, 10, 20, 4)"><p>55 : 10</p></button>
@@ -82,7 +80,7 @@
 
 				</div> <!-- interval-sidebar-inner -->
 			</div>
-			<!-- END CHOOSE INTERVAL SIDEBAR -->
+			<!-- END OF CHANGE INTERVAL SIDEBAR -->
 
 			<!-- START GET STATISTICS SIDEBAR -->
 			<div id="get-statistics">
