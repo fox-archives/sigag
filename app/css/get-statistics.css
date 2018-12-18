@@ -11,14 +11,11 @@
 }
 
 #get-statistics-inner {
+  margin-top: 15px;
   margin-left: 10%;
   margin-right: 10%;
 }
 
-#temporary-whitespace {
-  height: 100px;
-}
-
-.statistics-text {
-  margin-top: 15px;
+h2.statistics-text {
+  height: 125px;
 }

@@ -12,23 +12,23 @@ function updateOnSliderOnMove(sliderNumber) {
   // 2 for Long Break Duration
   // 3 for Long Break Interval
 
-  if(sliderNumber == 0)
+  if(sliderNumber === 0)
   {
     document.getElementById("work-duration-text").innerHTML = "Work: " + document.getElementById("work-duration").value + " minutes";
     document.getElementById("custom-interval-work").innerHTML = document.getElementById("work-duration").value;
   }
-  if(sliderNumber == 1)
+  if(sliderNumber === 1)
   {
     document.getElementById("short-break-duration-text").innerHTML = "Break: " + document.getElementById("short-break-duration").value + " minutes";
     document.getElementById("custom-interval-break").innerHTML = document.getElementById("short-break-duration").value;
   }
-  if(sliderNumber == 2)
+  if(sliderNumber === 2)
   {
     document.getElementById("long-break-duration-text").innerHTML = "Long Break: " + document.getElementById("long-break-duration").value + " minutes";
   }
-  if(sliderNumber == 3)
+  if(sliderNumber === 3)
   {
-    document.getElementById("long-break-interval-text").innerHTML = "Interval: " + Math.round(document.getElementById("long-break-interval").value/10);
+    document.getElementById("long-break-interval-text").innerHTML = "Interval: " + Math.round(document.getElementById("long-break-interval").value / 10);
   }
 }
 

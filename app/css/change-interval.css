@@ -1,4 +1,4 @@
-#change-interval-sidebar {
+#change-interval {
   position: fixed;
   background: var(--oc-gray-1);
   margin-top: 40px;
@@ -10,7 +10,7 @@
   z-index: 2;
 }
 
-#change-interval-sidebar-inner {
+#change-interval-inner {
   margin-left: 10%;
   margin-right: 10%;
 }

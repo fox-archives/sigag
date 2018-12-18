@@ -7,19 +7,21 @@
 		<link rel="stylesheet" type="text/css" href="app/css/open-color.css"/>
 		<link rel="stylesheet" type="text/css" href="app/css/fonts.css"/>
 		<link rel="stylesheet" type="text/css" href="app/css/main.css"/>
+
 		<link rel="stylesheet" type="text/css" href="app/css/buttons.css"/>
-		<link rel="stylesheet" type="text/css" href="app/css/choose-interval.css"/>
 		<link rel="stylesheet" type="text/css" href="app/css/control-buttons.css"/>
-		<link rel="stylesheet" type="text/css" href="app/css/get-statistics.css"/>
 		<link rel="stylesheet" type="text/css" href="app/css/input-slider.css"/>
 		<link rel="stylesheet" type="text/css" href="app/css/progress-bar.css"/>
-		<link rel="stylesheet" type="text/css" href="app/css/timer-clock.css"/>
+
 		<link rel="stylesheet" type="text/css" href="app/css/titlebar-container.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/change-interval.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/get-statistics.css"/>
+		<link rel="stylesheet" type="text/css" href="app/css/main-container.css"/>
 	</head>
 		<!-- MAIN NAVIGATION -->
 		<body>
 
-    <!-- START OF TITLEBAR -->
+    <!-- START OF TITLEBAR CONTAINER -->
 			<nav id="titlebar-container">
 					<div id="clock" class="titlebar-icon" onclick="toggleCustomIntervalSidebar(1)">
 						<svg id="clock-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -47,11 +49,11 @@
 							</svg>
 					</div>
 			</nav>
-			<!-- END OF TITLEBAR -->
+			<!-- END OF TITLEBAR CONTAINER-->
 
 			<!-- START OF CHANGE INTERVAL SIDEBAR -->
-			<div id="change-interval-sidebar">
-				<div id="change-interval-sidebar-inner">
+			<div id="change-interval">
+				<div id="change-interval-inner">
 					<h1 class="interval-text">Change Timer Interval</h1>
 					<h2 class="interval-text" id="recommended-intervals">Recommended Intervals</h2>
 					<button onclick="updateAllIntervalComponents(25, 5, 10, 4)"><p>25 : 5</p></button>
@@ -86,17 +88,17 @@
 			<div id="get-statistics">
 				<div id="get-statistics-inner">
 					<h1 class="statistics-text">Get Statistics</h1>
-					<h2 class ="statistics-text">Data Set 1</h2>
-					<div id="temporary-whitespace"></div>
-					<h2 class ="statistics-text">Data Set 2</h2>
-					<div id="temporary-whitespace"></div>
-					<button onclick="toggleStatisticsSidebar(0)"><p>Close</p></button>
+					<h2 class="statistics-text">Data Set 1</h2>
+					<h2 class="statistics-text">Data Set 2</h2>
+					<button onclick="toggleStatisticsSidebar(0)">
+            <p>Close</p>
+          </button>
 				</div>
 			</div>
 			<!-- END GET STATISTICS SIDEBAR -->
 
-			<!-- START MAIN CONTAINERK -->
-			<div id="main-ui">
+			<!-- START MAIN CONTAINER -->
+			<div id="main-container">
 				<div id="container">
 						<div id="timer-left"></div>
 						<div id="countdown"></div>

@@ -19,14 +19,3 @@ h2 {
     font-family: source_sans_prolight;
     font-size: 1.25em;
 }
-
-#main-ui {
-  margin-top: 40px;
-  padding-top: 50px;
-  width: 100%;
-}
-
-#countdown {
-  grid-column-start: 2;
-  grid-column-end: 3;
-}

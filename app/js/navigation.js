@@ -7,14 +7,14 @@ function toggleCustomIntervalSidebar(isOpen) {
   if(isOpen === 1 && statisticsOpen == false)
   {
     customTimerOpen = true;
-    document.getElementById("change-interval-sidebar").style.left="0"
-    document.getElementById("change-interval-sidebar").style.width="100%"
+    document.getElementById("change-interval").style.left="0"
+    document.getElementById("change-interval").style.width="100%"
   }
   // Closes the customInterval sidebar
   if(isOpen === 0)
   {
     customTimerOpen = false;
-    document.getElementById("change-interval-sidebar").style.left="-100%"
+    document.getElementById("change-interval").style.left="-100%"
   }
 }
 
