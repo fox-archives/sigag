@@ -41,11 +41,12 @@
 #minimize-application-svg {
   padding-right: 4px;
 }
-#clock-svg, #statistics-svg, #minimize-application-svg, #close-application-svg {
+
+.titlebar-svg {
   stroke: var(--oc-gray-9);
 }
 
-#clock:hover > #clock-svg, #statistics:hover > #statistics-svg, #minimize-application:hover > #minimize-application-svg, #close-application:hover > #close-application-svg {
+.titlebar-icon:hover > .titlebar-svg {
   stroke: var(--oc-gray-6);
   transition: stroke 200ms;
 }
