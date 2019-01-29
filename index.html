@@ -64,19 +64,19 @@
 
 					<div id="time-sliders">
 						<h2 id="work-duration-text" class="interval-text">Work: 25 minutes</h2>
-						<input id="work-duration" type="range" min="5" max="120" value="25" onmousemove="updateOnSliderOnMove(0)" onmousedown="updateOnSliderOnMove(0)">
+						<input id="work-duration" type="range" min="5" max="120" value="25" onmousemove="updateOnSliderOnMove('work')" onmousedown="updateOnSliderOnMove('work')">
 
 						<h2 id="short-break-duration-text" class="interval-text">Break: 5 minutes</h2>
-						<input id="short-break-duration" type="range" min="5" max="25" value="5" onmousemove="updateOnSliderOnMove(1)" onmousedown="updateOnSliderOnMove(1)">
+						<input id="short-break-duration" type="range" min="5" max="25" value="5" onmousemove="updateOnSliderOnMove('break')" onmousedown="updateOnSliderOnMove('break')">
 
 						<h2 id="long-break-duration-text" class="interval-text">Long Break: 10 minutes</h2>
-						<input id="long-break-duration" type="range" min="5" max="50" value="10" onmousemove="updateOnSliderOnMove(2)" onmousedown="updateOnSliderOnMove(2)">
+						<input id="long-break-duration" type="range" min="5" max="50" value="10" onmousemove="updateOnSliderOnMove('long-break')" onmousedown="updateOnSliderOnMove('long-break')">
 
 						<h2 id="long-break-interval-text" class="interval-text">Interval: 4</h2>
-						<input id="long-break-interval" type="range" min="10" max="80" value="40" onmousemove="updateOnSliderOnMove(3)" onmousedown="updateOnSliderOnMove(3)">
+						<input id="long-break-interval" type="range" min="1" max="8" value="4" onmousemove="updateOnSliderOnMove('interval')" onmousedown="updateOnSliderOnMove('interval')">
 					</div>
 
-					<button class="interval-text" id="custom-interval-save" onclick="toggleCustomIntervalSidebar(0)">Apply</button>
+					<button class="interval-text" id="custom-interval-save" onclick="toggleCustomIntervalSidebar(0)" onclick="saveIntervalData()">Apply</button>
 					<button class="interval-text" id="custom-interval-no-save" onclick="toggleCustomIntervalSidebar(0)">Close</button>
 
 				</div> <!-- interval-sidebar-inner -->
@@ -103,8 +103,8 @@
 				</div>
 
 				<div id="timer-controls">
-					<button id="start-button">Start</button>
-          <button id="pause-button">Pause</button>
+					<button id="start-button" onclick="playProgressBar()">Start</button>
+          <button id="pause-button" onclick="pauseProgressBar()">Pause</button>
           <button id="stop-button">Stop</button>
 				</div>
 			</div>
@@ -117,4 +117,5 @@
 		<script src="./node_modules/progressbar.js/dist/progressbar.js"></script>
 		<script src="./app/js/timer.js"></script>
 		<script src="./app/js/progress-bar.js"></script>
+		<script src="./app/js/main-container.js"></script>
 </html>

@@ -1,5 +1,5 @@
 //Create a progress bar that shows the timer that counts down
-var bar = new ProgressBar.Circle('#countdown', {
+let bar = new ProgressBar.Circle('#countdown', {
   color: '#868e96',
   // This has to be the same size as the maximum width to prevent clipping
   strokeWidth: 5,
@@ -18,7 +18,7 @@ var bar = new ProgressBar.Circle('#countdown', {
     circle.path.setAttribute('stroke-width', state.width);
 
     // "value" is the value that shows when the bar is fully loaded. The timer.StartTime after circle.value() originally was 25
-    var value = timer.startTime - Math.round(circle.value() * timer.startTime);
+    let value = timer.startTime - Math.round(circle.value() * timer.startTime);
     if (value === 0) {
       circle.setText('0:00');
     }

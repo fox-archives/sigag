@@ -11,11 +11,11 @@ body {
 }
 
 h1 {
-    font-family: source_sans_proregular;
+    font-family: source_sans_proregular, sans-serif;
     font-size: 2em;
 }
 
 h2 {
-    font-family: source_sans_prolight;
+    font-family: source_sans_prolight, sans-serif;
     font-size: 1.25em;
 }
