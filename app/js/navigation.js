@@ -1,5 +1,5 @@
-var statisticsOpen = false;
-var customTimerOpen = false;
+let statisticsOpen = false;
+let customTimerOpen = false;
 
 // Function that either opens or closes customInterval sidebar, depending on parameter, and if the statistics sidebar is open
 function toggleCustomIntervalSidebar(isOpen) {

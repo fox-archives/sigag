@@ -48,3 +48,23 @@ function changeCustomIntervalText(workDuration, shortBreakDuration, longBreakDur
   document.getElementById("custom-interval-work").innerHTML = workDuration;
   document.getElementById("custom-interval-break").innerHTML = shortBreakDuration;
 }
+
+function createTimers(input) {
+  timersData = {
+    workDuration: document.getElementById("work-duration").value,
+    shortBreakDuration: document.getElementById("short-break-duration").value,
+    longBreakDuration: document.getElementById("long-break-duration").value,
+    longBreakInterval: document.getElementById("long-break-interval").value
+  };
+
+  for(let key in timersData) {
+    timersData[key] = parseInt(timersData[key]);
+  }
+
+  // Create a group of timers with the given data
+  timerGroup = createTimerGroup(timersData);
+
+  if(input === "startTimer") {
+    startTimerGroup(timerGroup, bar);
+  }
+}
