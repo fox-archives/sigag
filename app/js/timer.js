@@ -1,7 +1,7 @@
 // Create a constructor for a Timer object, which has parameters startTime
-function Timer(startTimeMinutes) {
+function Timer(startTime) {
     // Variables in seconds only (converted using toSecondsOnly function)
-    this.startTime = startTimeMinutes * 60;
+    this.startTime = startTime;
     
     this.start = function() {
       bar.animate(1);
@@ -17,4 +17,4 @@ function Timer(startTimeMinutes) {
 }
 
 // Create new Timer object named "timer" starts at 1 minute (goes down to zero)
-let timer = new Timer(1);
+let timer = new Timer(65000);

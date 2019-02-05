@@ -13,12 +13,13 @@ function animateTimerToZero() {
 }
 
 function animateTimerToOne(newStartTime) {
+  console.log(newStartTime);
   return new Promise(resolve => {
     // This changes the animation of the bar
-    bar.animate(0, {
-      duration: newStartTime * 1000,
-      easing: "easeInOutQuad"
-    }, resolve);
+    bar.animate(1, {
+      duration: 5000, // Replacing this with a number "fixes" the problem
+      easing: "linear"
+    });
   })
 }
 
@@ -32,17 +33,22 @@ function epsilon() {
 
 // This starts the next timer in the sequence. progressInTimerGroup gets bigger inside of the animateTimerToOne function
 function startNextTimer(timersGroup, progressInTimerGroup) {
+  //
+  timer = timersGroup[progressInTimerGroup];
+
   // Set progressInTimeGroup to zero if we're at end of timersGroup array
   progressInTimerGroup = (progressInTimerGroup === timersGroup.length ? 0 : progressInTimerGroup);
 
   // The actual looping happens in startNextTimer()
   animateTimerToZero()
   .then(() => {
-    console.log("phase 1");
     newStartTime = timersGroup[progressInTimerGroup].startTime;
     return animateTimerToOne(newStartTime);
   })
-  .then(() => startNextTimer(timersGroup, progressInTimerGroup + 1))
+  .then(() => {
+    console.log("test");
+    startNextTimer(timersGroup, progressInTimerGroup + 1)
+  })
 }
 
 // This is called from the DOM when "Apply" is pressed
@@ -54,13 +60,13 @@ function createTimerGroup() {
   // TODO: Clean this up
   timersGroup = [];
   for(let i = 0; i < timersData.longBreakInterval; i++) {
-  	workTimer = new Timer(timersData.workDuration);
-  	smallBreakTimer = new Timer(timersData.shortBreakDuration)
+  	workTimer = new Timer(timersData.workDuration * 1000);
+  	smallBreakTimer = new Timer(timersData.shortBreakDuration * 1000)
 
   	timersGroup.push(workTimer);
   	timersGroup.push(smallBreakTimer);
   }
-  longBreakTimer = new Timer(timersData.longBreakDuration);
+  longBreakTimer = new Timer(timersData.longBreakDuration * 1000);
   timersGroup.push(longBreakTimer);
 
   console.log(timersGroup)

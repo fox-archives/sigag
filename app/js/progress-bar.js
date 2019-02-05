@@ -11,7 +11,21 @@ let bar = new ProgressBar.Circle("#countdown", {
   to: { color: "#343a40", width: 5 },
 
   // Set default step function for all animate calls
-  step: helper.progressBarStep
+  step: function(state, circle) {
+    circle.path.setAttribute("stroke", state.color);
+    circle.path.setAttribute("stroke-width", state.width);
+
+
+    // "value" is the value of progress bar at a certain point (0 < value < state.duration) The timer.StartTime after circle.value() originally was 25
+    startTimeInSeconds = timer.startTime / 1000;
+    let value = startTimeInSeconds - Math.round(circle.value() * startTimeInSeconds);
+    if (value === 0) {
+      circle.setText("0:00");
+    }
+    else {
+      circle.setText(helper.toTotalMinutes(value) + ":" + helper.toRemainingSeconds(value));
+    }
+  },
 
 });
 
