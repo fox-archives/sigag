@@ -74,8 +74,8 @@
 					<input id="long-break-interval" type="range" min="1" max="8" value="4" onmousemove="updateOnSliderOnMove('interval')" onmousedown="updateOnSliderOnMove('interval')">
 				</div>
 
-				<button class="interval-text" id="custom-interval-save" onclick="createTimers()">Apply</button>
-				<button class="interval-text" id="custom-interval-no-save" onclick="toggleCustomIntervalSidebar(0);createTimers('startTimer')">Close</button>
+				<button class="interval-text" id="custom-interval-save" onclick="createTimerGroup()">Apply</button>
+				<button class="interval-text" id="custom-interval-no-save" onclick="toggleCustomIntervalSidebar(0);createTimerGroupAndStart()">Save</button>
 
 			</div>
 		</div>
@@ -109,11 +109,12 @@
 	<!-- END MAIN CONTAINER -->
 
 	</body>
-	<script src="./app/js/main.js"></script>
+	<script src="./app/js/helper.js"></script>
 	<script src="./app/js/window-manage.js"></script>
+	<script src="./app/js/navigation.js"></script>
 	<script src="./node_modules/progressbar.js/dist/progressbar.js"></script>f
 	<script src="./app/js/timer.js"></script>
-	<script src="./app/js/timer-control.js"></script>
+	<script src="./app/js/timer-group.js"></script>
 	<script src="./app/js/choose-interval.js"></script>
 	<script src="./app/js/progress-bar.js"></script>
 </html>
