@@ -13,11 +13,11 @@ function animateTimerToZero() {
 }
 
 function animateTimerToOne(newStartTime) {
-  console.log(newStartTime);
   return new Promise(resolve => {
+    console.log(newStartTime);
     // This changes the animation of the bar
     bar.animate(1, {
-      duration: 2000, // Replacing this with a number "fixes" the problem
+      duration: newStartTime, // Replacing this with a number "fixes" the problem
       easing: "linear"
     }, resolve);
   })
