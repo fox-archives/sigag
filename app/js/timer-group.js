@@ -4,7 +4,7 @@ function animateTimerToZero() {
     if(bar.value() > 0) {
       // This changes the animation of the bar
       bar.animate(0, {
-        duration: 333,
+        duration: 500,
         easing: "easeInOutQuad"
       }, resolve);
     }
@@ -14,7 +14,7 @@ function animateTimerToZero() {
 
 function animateTimerToOne(newStartTime) {
   return new Promise(resolve => {
-    console.log(newStartTime);
+    // console.log(newStartTime);
     // This changes the animation of the bar
     bar.animate(1, {
       duration: newStartTime, // Replacing this with a number "fixes" the problem
@@ -46,7 +46,7 @@ function startNextTimer(timersGroup, progressInTimerGroup) {
     return animateTimerToOne(newStartTime);
   })
   .then(() => {
-    startNextTimer(timersGroup, progressInTimerGroup + 1)
+    startNextTimer(timersGroup, progressInTimerGroup + 1);
   })
 }
 
@@ -68,7 +68,6 @@ function createTimerGroup() {
   longBreakTimer = new Timer(timersData.longBreakDuration * 60000);
   timersGroup.push(longBreakTimer);
 
-  console.log(timersGroup)
   return timersGroup;
 }
 
