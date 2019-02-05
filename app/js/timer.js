@@ -17,4 +17,4 @@ function Timer(startTime) {
 }
 
 // Create new Timer object named "timer" starts at 1 minute (goes down to zero)
-let timer = new Timer(65000);
+let timer = new Timer(25 * 60 * 1000);
