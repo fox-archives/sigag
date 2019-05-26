@@ -9,7 +9,7 @@ Study efficiently with an interval timer and track studying habbits using Sigag.
 * [x] Have a beautiful user interface
 * [x] Set recommended intervals or create a custom interval to study at
 * [x] Configure a break interval, if needed
-* [ ] Works in its basic form
+* [ ] Works in   its basic form
 * ~~Collect various statistics such as~~
   * ~~Total work time~~
   * ~~Total break time~~
@@ -22,8 +22,8 @@ Study efficiently with an interval timer and track studying habbits using Sigag.
 ## How to Install and Run
 
 ```bash
-$ git clone https://github.com/EanKeen/sigag
-$ cd Sigag
+$ git clone https://github.com/eankeen/sigag
+$ cd sigag
 $ npm install
 $ npm start
 ```

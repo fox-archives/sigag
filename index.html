@@ -27,12 +27,12 @@
 					</svg>
 				</div>
 
-				<div id="statistics" class="titlebar-icon" onclick="toggleStatisticsSidebar(1)">
+				<!-- <div id="statistics" class="titlebar-icon" onclick="toggleStatisticsSidebar(1)">
 					<svg id="statistics-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<line x1="18" y1="20" x2="18" y2="10"></line>
 							<line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line>
 						</svg>
-				</div>
+				</div> -->
 				<div id="minimize-application" class="titlebar-icon">
 					<svg id="minimize-application-svg" class="titlebar-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<line x1="5" y1="12" x2="19" y2="12"></line>
@@ -74,8 +74,8 @@
 					<input id="long-break-interval" type="range" min="1" max="8" value="4" onmousemove="updateOnSliderOnMove('interval')" onmousedown="updateOnSliderOnMove('interval')">
 				</div>
 
-				<button class="interval-text" id="custom-interval-save" onclick="createTimerGroup()">Apply</button>
-				<button class="interval-text" id="custom-interval-no-save" onclick="toggleCustomIntervalSidebar(0);createTimerGroupAndStart()">Save</button>
+				<button class="interval-text" id="custom-interval-save" onclick="toggleCustomIntervalSidebar(0)">Close</button>
+				<button class="interval-text" id="custom-interval-no-save" onclick="toggleCustomIntervalSidebar(0);createTimerGroupAndStart()">Save & Close</button>
 
 			</div>
 		</div>
@@ -94,6 +94,7 @@
 
 		<!-- START MAIN CONTAINER -->
 		<div id="main-container">
+			<h1 id="mode"></h1>
 			<div id="container">
 					<div id="timer-left"></div>
 					<div id="countdown"></div>

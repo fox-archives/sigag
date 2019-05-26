@@ -2,6 +2,7 @@
 function Timer(startTime) {
     // Variables in seconds only (converted using toSecondsOnly function)
     this.startTime = startTime;
+    this.mode = "work";
     
     this.start = function() {
       bar.animate(1);

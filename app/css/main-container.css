@@ -1,6 +1,6 @@
 #main-container {
   position: fixed;
-  margin-top: 40px;
+  margin-top: 25px;
   padding-top: 50px;
   width: 100%;
 }
@@ -25,4 +25,10 @@
   justify-content: center;
   align-items: center;
   align-content: center;
+}
+
+#mode {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--oc-gray-9);
 }

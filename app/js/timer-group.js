@@ -23,14 +23,6 @@ function animateTimerToOne(newStartTime) {
   })
 }
 
-function epsilon() {
-  // This changes the animation of the bar
-  bar.animate(.5, {
-    duration: 333,
-    easing: "easeInOutQuad"
-  });
-}
-
 // This starts the next timer in the sequence. progressInTimerGroup gets bigger inside of the animateTimerToOne function
 function startNextTimer(timersGroup, progressInTimerGroup) {
   // Set progressInTimeGroup to zero if we're at end of timersGroup array
@@ -38,6 +30,9 @@ function startNextTimer(timersGroup, progressInTimerGroup) {
 
   // Make sure we replace the global timer object with the one we're currently about to use
   timer = timersGroup[progressInTimerGroup];
+
+  // Update text on DOM
+  document.getElementById("mode").innerHTML = timer.mode;
 
   // The actual looping happens in startNextTimer()
   animateTimerToZero()
@@ -68,16 +63,20 @@ function createTimerGroup() {
   timersData = getTimersData();
   timersData = helper.convertStingPropsToNumber(timersData);
 
-  // TODO: Clean this up
   timersGroup = [];
   for(let i = 0; i < timersData.longBreakInterval; i++) {
-  	workTimer = new Timer(timersData.workDuration * 60000);
-  	smallBreakTimer = new Timer(timersData.shortBreakDuration * 60000)
+    workTimer = new Timer(timersData.workDuration * 60000);
+    workTimer.mode = "Work";
+
+    smallBreakTimer = new Timer(timersData.shortBreakDuration * 60000);
+    smallBreakTimer.mode = "Short Break"
 
   	timersGroup.push(workTimer);
   	timersGroup.push(smallBreakTimer);
   }
   longBreakTimer = new Timer(timersData.longBreakDuration * 60000);
+  longBreakTimer.mode = "Long Break";
+
   timersGroup.push(longBreakTimer);
 
   return timersGroup;
@@ -88,10 +87,3 @@ function createTimerGroupAndStart() {
   let timersGroup = createTimerGroup()
   startNextTimer(timersGroup, 0);
 }
-
-function TimerGroup() {
-  this.progressInTimerGroup = 0;
-  this.timersGroup = createTimerGroup;
-}
-
-let timerGroup = new TimerGroup();
