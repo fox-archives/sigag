@@ -5,9 +5,8 @@ Study efficiently with an interval timer and track studying habbits using Sigag.
 ## Features
 ### Major Update 1
 * Have a beautiful user interface
-* Choose from a variety of pre-built themes, or custom-build a theme
-* Set recommended intervals or create a custom interval to study at
-* Configure a break interval, if needed
+* [x] Set recommended intervals or create a custom interval to study at
+* [x] Configure a break interval, if needed
 * Collect various statistics such as
   * Total work time
   * Total break time

@@ -103,7 +103,7 @@
 			<div id="timer-controls">
 				<button id="start-button" onclick="createTimerGroupAndStart()">Start</button>
       <button id="pause-button" onclick="timer.pause()">Pause</button>
-      <button id="stop-button" onclick="timer.restart()">Restart</button>
+      <button id="stop-button" onclick="animateTimerToZero();replayCurrentTimer(timersGroup, progressInTimerGroup)">Restart</button>
 			</div>
 		</div>
 	<!-- END MAIN CONTAINER -->

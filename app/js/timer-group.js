@@ -50,6 +50,18 @@ function startNextTimer(timersGroup, progressInTimerGroup) {
   })
 }
 
+function replayCurrentTimer(timersGroup, progressInTimerGroup) {
+  // The actual looping happens in startNextTimer()
+  animateTimerToZero()
+  .then(() => {
+    newStartTime = timersGroup[progressInTimerGroup].startTime;
+    return animateTimerToOne(newStartTime);
+  })
+  .then(() => {
+    startNextTimer(timersGroup, progressInTimerGroup);
+  })
+}
+
 // This is called from the DOM when "Apply" is pressed
 function createTimerGroup() {
   // Data about the new timer (object with properties of long / short break / work timers etc.)
@@ -76,3 +88,10 @@ function createTimerGroupAndStart() {
   let timersGroup = createTimerGroup()
   startNextTimer(timersGroup, 0);
 }
+
+function TimerGroup() {
+  this.progressInTimerGroup = 0;
+  this.timersGroup = createTimerGroup;
+}
+
+let timerGroup = new TimerGroup();
