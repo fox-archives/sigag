@@ -5,7 +5,8 @@ sigag (시각) - Korean for "time"
 
 Study efficiently with an interval timer and track studying habbits using Sigag. Study in 25 minute to 5 minute intervals or study in custom intervals. ~~Track how often you study, and other useful statistics in the statistics page. Sigag will be a free desktop program available for everyone to use.~~
 
-<img src="./image.png" alt="photograph of application" width="250px"></img>
+<img src="./image.png" alt="photograph of application" height="550px"></img>
+<img src="./image2.png" alt="photograph of application" height="550px"></img>
 
 ## Archived
 
