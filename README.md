@@ -10,7 +10,7 @@ Study efficiently with an interval timer and track studying habbits using Sigag.
 
 ## Archived
 
-This project is archived. I have no intentions of revisiting this project. There are no distribution or installation files for this project. I strongly do not recommend using this project for any serious work.
+This project is archived. I have no intentions of revisiting this project. There are no distribution or installation files for this project. I do not recommend using this project for any serious work.
 
 ## Features
 
